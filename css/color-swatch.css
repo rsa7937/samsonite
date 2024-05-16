@@ -1,0 +1,219 @@
+@charset 'utf-8';
+
+:root {
+  /* best item */
+  --MATT-GRAPHITE: #212120;
+  --MATTE-GREEN: #393d33;
+  --MATTE-WHITE: #e0e4e5;
+
+  --ICE-BLUE: #30374c;
+  --DEEP-BLUE: #3e5e6b;
+  --CHILI-RED: #a31716;
+  --BLACK: #000;
+  --OFF-WHITE: #fff;
+  --MIDNIGHT-BLUE: #34353a;
+
+  --KHAKI: #737d7c;
+  --NAVY: #2f2c31;
+
+  --LATTE: #b8b0ab;
+  --PETAL-PINK: #f0ced7;
+
+  --SILVER: #acacac;
+  --GREEN: #60857f;
+
+  /* new item */
+  --MUSTARD: #cb8238;
+  --OLIVE: #899586;
+  --PETROL-BLUE: #807f83;
+  --LIME: #8ba51c;
+
+  --SKY-BLUE-PRINT: #97b7da;
+
+  --STEEL-BLUE: #354052;
+  --BASIL-GREEN: #586b59;
+  --DUNE: #67625c;
+  --RED: #8b0d16;
+  --ANTHRACITE: #282828;
+
+  /* filter color chips */
+  /* --GREEN: #81c341; */
+  --LIGHT-GREEN: #6ac6b1;
+  --BEIGE: #f5f5dc;
+  --BLUE: #3393d0;
+  --YELLOW: #ffc012;
+  --ORANGE: #ef7922;
+  --PURPLE: #c11c8a;
+  --PINK: #fe249a;
+
+  /* sub-luggage-luggage-item */
+  --OZONE-BLACK: #232324;
+  --FOREST-GREEN: #2c312b;
+
+  --POWDER-PINK: #dfa79a;
+  --SOFT-MINT: #adf2ef;
+  --GOLDEN-HAZE: #e2b75a;
+
+  --LIGHT-BLUE: #7592a4;
+  --ORANGE: #a36647;
+  --DARK-GREY: #6c6971;
+
+  --YELLOW: #e6b711;
+}
+
+.matt-grahpite {
+  background: var(--MATT-GRAPHITE);
+}
+.matte-green {
+  background: var(--MATTE-GREEN);
+}
+.matte-white {
+  background: var(--MATTE-WHITE);
+}
+
+.ice-blue {
+  background: var(--ICE-BLUE);
+}
+.deep-blue {
+  background: var(--DEEP-BLUE);
+}
+.chili-red {
+  background: var(--CHILI-RED);
+}
+.black {
+  background: var(--BLACK);
+}
+.off-white {
+  background: var(--OFF-WHITE);
+  border: 1px solid var(--gray2);
+}
+.midnight-blue {
+  background: var(--MIDNIGHT-BLUE);
+}
+
+.khaki {
+  background: var(--KHAKI);
+}
+.navy {
+  background: var(--NAVY);
+}
+
+.latte {
+  background: var(--LATTE);
+}
+.petal-pink {
+  background: var(--PETAL-PINK);
+}
+
+.silver {
+  background: var(--SILVER);
+}
+.green {
+  background: var(--GREEN);
+}
+
+.mustard {
+  background: var(--MUSTARD);
+}
+.olive {
+  background: var(--OLIVE);
+}
+
+.petrol-blue {
+  background: var(--PETROL-BLUE);
+}
+.lime {
+  background: var(--LIME);
+}
+
+.sky-blue-print {
+  background: var(--SKY-BLUE-PRINT);
+}
+
+.steel-blue {
+  background: var(--STEEL-BLUE);
+}
+.basil-green {
+  background: var(--BASIL-GREEN);
+}
+.dune {
+  background: var(--DUNE);
+}
+.red {
+  background: var(--RED);
+}
+.anthracite {
+  background: var(--ANTHRACITE);
+}
+
+/* filter color chips */
+.filter-con .filter-item .filter-option-list .filter-option-color span.gray::after {
+  background: var(--gray2);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.green::after {
+  background: var(--GREEN);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.navy::after {
+  background: var(--NAVY);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.light-green::after {
+  background: var(--LIGHT-GREEN);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.red::after {
+  background: var(--RED);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.beige::after {
+  background: var(--BEIGE);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.black::after {
+  background: var(--BLACK);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.blue::after {
+  background: var(--BLUE);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.silver::after {
+  background: var(--SILVER);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.yellow::after {
+  background: var(--YELLOW);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.orange::after {
+  background: var(--ORANGE);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.purple::after {
+  background: var(--PURPLE);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.pink::after {
+  background: var(--PINK);
+}
+.filter-con .filter-item .filter-option-list .filter-option-color span.white::after {
+  background: var(--OFF-WHITE);
+}
+
+.ozone-black {
+  background: var(--OZONE-BLACK);
+}
+.forest-green {
+  background: var(--FOREST-GREEN);
+}
+.powder-pink {
+  background: var(--POWDER-PINK);
+}
+.soft-mint {
+  background: var(--SOFT-MINT);
+}
+.golden-haze {
+  background: var(--GOLDEN-HAZE);
+}
+.light-blue {
+  background: var(--LIGHT-BLUE);
+}
+.orange {
+  background: var(--ORANGE);
+}
+.dark-grey {
+  background: var(--DARK-GREY);
+}
+.yellow {
+  background: var(--YELLOW);
+}

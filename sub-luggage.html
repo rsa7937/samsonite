@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쌤소나이트 공식 온라인몰</title>
+
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/sub-luggage.css">
+  <link rel="stylesheet" href="./css/color-swatch.css">
+</head>
+
+<body>
+  <a href="#container" class="skip hidden">본문 바로가기</a>
+
+  <!-- s: header -->
+  <header id="header">
+    <div class="inner">
+      <nav>
+        <h1 class="logo">
+          <a href="index.html"><i class="hidden">samsonite</i></a>
+        </h1>
+        <ul class="gnb">
+          <li>
+            <span><a href="#">LUGGAGE</a></span>
+            <ul class="gnb-dropdown gnb-menu-luggage">
+              <li>
+                <strong>소재</strong>
+                <div class="gnb-material">
+                  <a href="#">하드케이스</a>
+                  <a href="#">소프트 케이스</a>
+                  <a href="#">알루미늄</a>
+                </div>
+                <a href="#" class="gnb-link">여행가방 모두 보기</a>
+              </li>
+              <li>
+                <strong>크기</strong>
+                <div class="gnb-size">
+                  <a href="#">기내용</a>
+                  <a href="#">중형수하물</a>
+                  <a href="#">대형수하물</a>
+                </div>
+              </li>
+              <li>
+                <strong>색상</strong>
+                <div class="gnb-color">
+                  <a href="#">모노톤</a>
+                  <a href="#">쿨톤</a>
+                  <a href="#">웜톤</a>
+                </div>
+              </li>
+              <li>
+                <strong>주요 기능</strong>
+                <div class="gnb-function">
+                  <a href="#">이중코일지퍼</a>
+                  <a href="#">자동제어장치</a>
+                  <a href="#">지문인식잠금</a>
+                  <a href="#">마그네틱 지퍼</a>
+                  <a href="#">돌출 잠금</a>
+                  <a href="#">서스펜션 휠</a>
+                  <a href="#">USB 포트</a>
+                  <a href="#">내장형 저울</a>
+                </div>
+              </li>
+              <li>
+                <strong>브랜드</strong>
+                <div class="gnb-brand">
+                  <a href="#"><i class="hidden">Samsonite</i></a>
+                  <a href="#"><i class="hidden">Samsonite Blacklabel</i></a>
+                  <a href="#"><i class="hidden">Samsonite Red</i></a>
+                </div>
+              </li>
+              <li>
+                <strong>Collection</strong>
+                <div class="gnb-collection">
+                  <a href="#">Richmon II</a>
+                  <a href="#">SBL Re. classic</a>
+                  <a href="#">C-Lite</a>
+                  <a href="#">Upscape</a>
+                  <a href="#">Toiis Blossom</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li><span><a href="#">BACKPACKS</a></span></li>
+          <li><span><a href="#">BAGS</a></span></li>
+          <li><span><a href="#">ACCESSORIES</a></span></li>
+          <li><span><a href="#">BRANDS</a></span></li>
+          <li><span><a href="#">EXPLORE</a></span></li>
+          <li><span><a href="#">PROMOTION</a></span></li>
+        </ul>
+        <div class="util">
+          <button type="button" class="btn-user">
+            <i class="hidden">user</i>
+          </button>
+          <button type="button" class="btn-location">
+            <i class="hidden">location</i>
+          </button>
+          <!-- span으로 동그라미 안에 있는 숫자를 기입해야할 것 같은데, button이 아니라 a태그를 써야할지? -->
+          <button type="button" class="btn-shopping">
+            <i class="hidden">shopping</i>
+            <span>0</span>
+          </button>
+          <button type="button" class="btn-search">
+            <i class="hidden">search</i>
+          </button>
+          <!-- 타블렛, 모바일 헤더에서 보이는 메뉴 버튼 -->
+          <button type="button" class="btn-menu">
+            <i class="hidden">menu</i>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="gnb-bg"></div>
+  </header>
+  <hr>
+  <!-- //e: header -->
+
+  <!-- s: main -->
+  <main id="container" class="luggage">
+
+    <!-- Section 001 : sub-section-title -->
+    <section class="sub-visual">
+      <div class="inner">
+        <div class="sub-title">
+          <h2><b>LUGGAGE</b></h2>
+          <p>다양한 사이즈, 기능성, 트렌디함을 갖춘 여행용 캐리어를 제안합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 002 : breadcrumb -->
+    <section class="breadcrumb">
+      <div class="inner">
+        <div class="breadcrumb-detail">
+          <a href="index.html"><i class="hidden">Home</i></a>
+          <strong>LUGGAGE</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 003 : luggage item-->
+    <section class="luggage-item">
+      <div class="inner">
+        <div class="luggage-item-wrap">
+          <h3><i class="hidden">luaggage item</i></h3>
+          <!-- Section 003-1 : Filter(left) -->
+          <div class="luggage-left-con filter-wrap mobile-filter">
+            <div class="filter-title">
+              <h4>필터</h4>
+              <div class="filter-btn-wrap">
+                <button type="button" class="btn-reset"><i class="hidden">reset</i></button>
+                <button type="button" class="btn-cancel"><i class="hidden">cancel</i></button>
+              </div>
+            </div>
+            <div class="filter-con">
+              <div class="filter-size filter-item">
+                <strong>크기</strong>
+                <div class="filter-inner">
+                  <ul class="filter-option-list">
+                    <li><a href="#" class="filter-option">기내용/소형</a></li>
+                    <li><a href="#" class="filter-option active">중형수하물</a></li>
+                    <li><a href="#" class="filter-option active">대형수하물</a></li>
+                    <li><a href="#" class="filter-option">특대형수하물</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter-color filter-item">
+                <strong>색상</strong>
+                <div class="filter-inner">
+                  <ul class="filter-option-list">
+                    <li><a href="#" class="filter-option filter-option-color">
+                        <span class="gray"><i class="hidden">filter-color-bg</i></span>그레이</a>
+                    </li>
+                    <li><a href="#" class="filter-option filter-option-color active"><span class="green"><i
+                            class="hidden">filter-color-bg</i></span>그린</a></li>
+                    <li><a href="#" class="filter-option filter-option-color active"><span class="navy"><i
+                            class="hidden">filter-color-bg</i></span>네이비</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="light-green"><i
+                            class="hidden">filter-color-bg</i></span>라이트그린</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="red"><i
+                            class="hidden">filter-color-bg</i></span>레드</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="beige"><i
+                            class="hidden">filter-color-bg</i></span>베이지</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="black"><i
+                            class="hidden">filter-color-bg</i></span>블랙</a></li>
+                    <li><a href="#" class="filter-option filter-option-color active"><span class="blue"><i
+                            class="hidden">filter-color-bg</i></span>블루</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="silver"><i
+                            class="hidden">filter-color-bg</i></span>실버</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="yellow"><i
+                            class="hidden">filter-color-bg</i></span>옐로우</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="orange"><i
+                            class="hidden">filter-color-bg</i></span>오렌지</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="purple"><i
+                            class="hidden">filter-color-bg</i></span>퍼플</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="pink"><i
+                            class="hidden">filter-color-bg</i></span>핑크</a></li>
+                    <li><a href="#" class="filter-option filter-option-color"><span class="white"><i
+                            class="hidden">filter-color-bg</i></span>화이트</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter-function filter-item">
+                <strong>기능</strong>
+                <div class="filter-inner">
+                  <ul class="filter-option-list">
+                    <li title="3 in 1 잠금장치"><a href="#" class="filter-option">3 in 1 잠금장치</a></li>
+                    <li title="Easy-Brake™ 시스템"><a href="#" class="filter-option active">Easy-Brake™ 시스템</a></li>
+                    <li title="Aero Trac™ Whirl Suspension Wheels"><a href="#" class="filter-option active">Aero Trac™
+                        Whirl
+                        Suspension Wheels</a></li>
+                    <li title="USB 포트"><a href="#" class="filter-option">USB 포트</a></li>
+                    <li title="마그네틱 지퍼 풀러"><a href="#" class="filter-option">마그네틱 지퍼 풀러</a></li>
+                    <li title="무게 측정 장치"><a href="#" class="filter-option">무게 측정 장치</a></li>
+                    <li title="서스펜션 휠"><a href="#" class="filter-option">서스펜션 휠</a></li>
+                    <li title="원 클릭 오픈 락"><a href="#" class="filter-option">원 클릭 오픈 락</a></li>
+                    <li title="코일 이중 지퍼"><a href="#" class="filter-option">코일 이중 지퍼</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter-price filter-item">
+                <strong>가격</strong>
+                <!-- 슬라이더는 나중에 넣는 걸로 -->
+                <div class="filter-inner">
+                  <div class="price-slider">
+                    <div class="slide-bar">
+                      <div class="slide-bar slide-bar-status"><i class="hidden">슬라이드 바 현상태</i></div>
+                      <button type="button" class="btn-slide-bar">
+                        <i class="hidden">슬라이드 바 버튼</i>
+                        <div class="info-price">92,000</div>
+                      </button>
+                      <button type="button" class="btn-slide-bar">
+                        <i class="hidden">슬라이드 바 버튼</i>
+                        <div class="info-price">1,999,000</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-type filter-item">
+                <strong>종류</strong>
+                <div class="filter-inner">
+                  <ul class="filter-option-list">
+                    <li><a href="#" class="filter-option">여성</a></li>
+                    <li><a href="#" class="filter-option">여행 가방</a></li>
+                    <li><a href="#" class="filter-option">키즈</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter-brand filter-item">
+                <strong>브랜드</strong>
+                <div class="filter-inner">
+                  <ul class="filter-option-list">
+                    <li title="Hartmann"><a href="#" class="filter-option">Hartmann</a></li>
+                    <li title="Sammies by Samsonite"><a href="#" class="filter-option">Sammies by Samsonite</a></li>
+                    <li title="Samsonite"><a href="#" class="filter-option">Samsonite</a></li>
+                    <li title="Samsonite Black Label"><a href="#" class="filter-option">Samsonite Black Label</a></li>
+                    <li title="Samsonite Red"><a href="#" class="filter-option">Samsonite Red</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section 003-2 : item-list(right) -->
+          <div class="luggage-right-con">
+            <div class="item-inner">
+              <div class="item-sort-wrap">
+                <div class="filter-tag-wrap">
+                  <ul class="tag-list">
+                    <li><a href="#">중형수하물</a></li>
+                    <li><a href="#">대형수하물</a></li>
+                    <li><a href="#">그린</a></li>
+                    <li><a href="#">네이비</a></li>
+                    <li><a href="#">블루</a></li>
+                    <li><a href="#">Easy-Brake™ 시스템</a></li>
+                    <li><a href="#">Aero Trac™ Whirl Suspension Wheel</a></li>
+                    <li><a href="#">200,000 ~ 400,000</a></li>
+                    <li><a href="#">400,000 ~ 800,000</a></li>
+                    <li><a href="#"><i class="hidden">etc</i></a></li>
+                  </ul>
+                </div>
+                <div class="item-sort">
+                  <span>정렬 기준</span>
+                  <div class="item-sort-btn">
+                    <button type="button">판매 인기순</button>
+                    <ul class="item-sort-list">
+                      <li class="active"><a href="#">판매 인기순</a></li>
+                      <li><a href="#">신상품</a></li>
+                      <li><a href="#">낮은 가격순</a></li>
+                      <li><a href="#">높은 가격순</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 모바일 상단 메뉴 -->
+            <div class="item-sort-menu-mobile">
+              <div class="btn-mobile-filter">
+                <a href="#">
+                  <strong class="title-mobile-filter">필터</strong>
+                  <strong class="num-mobile-filter">5</strong>
+                </a>
+              </div>
+              <div class="btn-mobile-sort">
+                <strong>정렬 기준</strong>
+                <span><i class="hidden">ico-dropdown</i></span>
+                <div class="mobile-sort-btn">
+                  <ul class="mobile-sort-list">
+                    <li><a href="#" class="active">판매 인기순</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">낮은 가격순</a></li>
+                    <li><a href="#">높은 가격순</a></li>
+                  </ul>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="luggage-item-wrap">
+              <div class="item-inner">
+                <ul class="luggage-item-list">
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage1.png" alt="ZIPPRIX 지프릭스">
+                          <img src="./img/luggage/luggage1-1.png" alt="ZIPPRIX 지프릭스2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>75cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="latte"><i class="hidden">LATTE</i></li>
+                          <li class="green"><i class="hidden">GREEN</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">ZIPPRIX</h4>
+                        <p class="item-detail">SPINNER 75/28 EXP</p>
+                        <div class="price-wrap">
+                          <strong class="price">489,000</strong>
+                          <span class="sale">699,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage2.png" alt="NB X SAMSONITE 뉴발란스">
+                          <img src="./img/luggage/luggage2-1.png" alt="NB X SAMSONITE 뉴발란스2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>75cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="mustard"><i class="hidden">MUSTARD</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                          <li class="olive"><i class="hidden">OLIVE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">NB X SAMSONITE</h4>
+                        <p class="item-detail">SPINNER 55/20 EXP V2</p>
+                        <div class="price-wrap">
+                          <strong class="price">399,000</strong>
+                          <span class="sale">570,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage3.png" alt="CLASSIC 2">
+                          <img src="./img/luggage/luggage3-1.png" alt="CLASSIC 2-2">
+                        </figure>
+                        <!-- <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>75cm</li>
+                        </ul> -->
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">CLASSIC 2</h4>
+                        <p class="item-detail">2 WHLD BUSINESS CASE</p>
+                        <div class="price-wrap">
+                          <strong class="price">315,000</strong>
+                          <span class="sale">450,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage4.png" alt="ATTRIX 아트릭스">
+                          <img src="./img/luggage/luggage4-1.png" alt="ATTRIX 아트릭스2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>75cm</li>
+                          <li>81cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="steel-blue"><i class="hidden">STEEL BLUE</i></li>
+                          <li class="basil-green"><i class="hidden">BASIL GREEN</i></li>
+                          <li class="dune"><i class="hidden">DUNE</i></li>
+                          <li class="red"><i class="hidden">RED</i></li>
+                          <li class="anthracite"><i class="hidden">ANTHRACITE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">ATTRIX</h4>
+                        <p class="item-detail">SPINNER 55/20 EXP</p>
+                        <div class="price-wrap">
+                          <strong class="price">656,100</strong>
+                          <span class="sale">729,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage5.png" alt="MK X SAMSONITE 메종키츠네">
+                          <img src="./img/luggage/luggage5-1.png" alt="MK X SAMSONITE 메종키츠네2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>75cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="matte-white"><i class="hidden">WHITE</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">MK X SAMSONITE</h4>
+                        <p class="item-detail">SPINNER 68</p>
+                        <div class="price-wrap">
+                          <strong class="price">529,000</strong>
+                          <span class="sale">570,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage6.png" alt="MK X SAMSONITE 메종키츠네">
+                          <img src="./img/luggage/luggage6-1.png" alt="MK X SAMSONITE 메종키츠네2">
+                        </figure>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="matte-white"><i class="hidden">WHITE</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">MK X SAMSONITE</h4>
+                        <p class="item-detail">ROLLING TOTE</p>
+                        <div class="price-wrap">
+                          <strong class="price">439,000</strong>
+                          <span class="sale">570,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage7.png" alt="RESPARK 리스파크">
+                          <img src="./img/luggage/luggage7-1.png" alt="RESPARK 리스파크2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>67cm</li>
+                          <li>79cm</li>
+                          <li>82cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="ozone-black"><i class="hidden">OZONE BLACK</i></li>
+                          <li class="forest-green"><i class="hidden">FOREST GREEN</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">RESPARK</h4>
+                        <p class="item-detail">SPINNER 82/31 EXP</p>
+                        <div class="price-wrap">
+                          <strong class="price">439,000</strong>
+                          <span class="sale">627,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage8.png" alt="TOIIS BLOSSOM 토이즈">
+                          <img src="./img/luggage/luggage8-1.png" alt="TOIIS BLOSSOM 토이즈2">
+                        </figure>
+
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="powder-pink"><i class="hidden">POWDER PINK</i></li>
+                          <li class="soft-mint"><i class="hidden">SOFT MINT</i></li>
+                          <li class="golden-haze"><i class="hidden">GOLDEN HAZE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE RED</p>
+                        <h4 class="item-name">TOIIS BLOSSOM</h4>
+                        <p class="item-detail">ROLLING TOTE + COVER</p>
+                        <div class="price-wrap">
+                          <strong class="price">278,100</strong>
+                          <span class="sale">309,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage9.png" alt="TOIIS BLOSSOM 토이즈">
+                          <img src="./img/luggage/luggage9-1.png" alt="TOIIS BLOSSOM 토이즈2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>73cm</li>
+                          <li>75cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="powder-pink"><i class="hidden">POWDER PINK</i></li>
+                          <li class="soft-mint"><i class="hidden">SOFT MINT</i></li>
+                          <li class="golden-haze"><i class="hidden">GOLDEN HAZE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE RED</p>
+                        <h4 class="item-name">TOIIS BLOSSOM</h4>
+                        <p class="item-detail">TRUNK + COVER</p>
+                        <div class="price-wrap">
+                          <strong class="price">422,100</strong>
+                          <span class="sale">469,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage10.png" alt="TOIIS BLOSSOM 토이즈">
+                          <img src="./img/luggage/luggage10-1.png" alt="TOIIS BLOSSOM 토이즈2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>76cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="powder-pink"><i class="hidden">POWDER PINK</i></li>
+                          <li class="soft-mint"><i class="hidden">SOFT MINT</i></li>
+                          <li class="golden-haze"><i class="hidden">GOLDEN HAZE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE RED</p>
+                        <h4 class="item-name">TOIIS BLOSSOM</h4>
+                        <p class="item-detail">SPINNER 55/20 EXP + COVER</p>
+                        <div class="price-wrap">
+                          <strong class="price">287,100</strong>
+                          <span class="sale">319,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage11.png" alt="SPECTROLITE 3">
+                          <img src="./img/luggage/luggage11-1.png" alt="SPECTROLITE 32">
+                        </figure>
+                        <ul class="item-size">
+                          <li>48cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="red"><i class="hidden">RED</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                          <li class="white"><i class="hidden">WHITE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">SPECTROLITE 3</h4>
+                        <p class="item-detail">ROLLING TOTE 17.3" EXP</p>
+                        <div class="price-wrap">
+                          <strong class="price">409,000</strong>
+                          <span class="sale">584,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage12.png" alt="SBL RE.CLASSIC">
+                          <img src="./img/luggage/luggage12-1.png" alt="SBL RE.CLASSIC2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>68cm</li>
+                          <li>76cm</li>
+                          <li>82cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="red"><i class="hidden">RED</i></li>
+                          <li class="black"><i class="hidden">BLACK</i></li>
+                          <li class="matte-white"><i class="hidden">WHITE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE BLACK LABEL</p>
+                        <h4 class="item-name">SBL RE.CLASSIC</h4>
+                        <p class="item-detail">ROLLING TOTE 17.3" EXP</p>
+                        <div class="price-wrap">
+                          <strong class="price">409,000</strong>
+                          <span class="sale">584,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage13.png" alt="GRITT 그릿">
+                          <img src="./img/luggage/luggage13-1.png" alt="GRITT 그릿2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>55cm</li>
+                          <li>66cm</li>
+                          <li>76cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="light-blue"><i class="hidden">LIGHT BLUE</i></li>
+                          <li class="orange"><i class="hidden">ORANGE</i></li>
+                          <li class="silver"><i class="hidden">SILVER</i></li>
+                          <li class="dark-grey"><i class="hidden">DARK GREY</i></li>
+                        </ul>
+                        <p class="brand-name">SAMSONITE</p>
+                        <h4 class="item-name">GRITT</h4>
+                        <p class="item-detail">SPINNER 55/20</p>
+                        <div class="price-wrap">
+                          <strong class="price">409,000</strong>
+                          <span class="sale">584,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage14.png" alt="SAMMIES DREAMS">
+                          <img src="./img/luggage/luggage14-1.png" alt="SAMMIES DREAMS2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>45cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="black"><i class="hidden">BLACK/WHITE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMMIES BY SAMSONITE</p>
+                        <h4 class="item-name">SAMMIES DREAMS</h4>
+                        <p class="item-detail">SPINNER 45/16 PENGUIN</p>
+                        <div class="price-wrap">
+                          <strong class="price">159,000</strong>
+                          <span class="sale">227,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="item-pic">
+                        <figure>
+                          <img src="./img/luggage/luggage15.png" alt="GRITT 그릿">
+                          <img src="./img/luggage/luggage15-1.png" alt="GRITT 그릿2">
+                        </figure>
+                        <ul class="item-size">
+                          <li>45cm</li>
+                        </ul>
+                      </div>
+                      <div class="item-info">
+                        <ul class="color-swatch">
+                          <li class="yellow"><i class="hidden">YELLOW/ORANGE</i></li>
+                        </ul>
+                        <p class="brand-name">SAMMIES BY SAMSONITE</p>
+                        <h4 class="item-name">SAMMIES DREAMS</h4>
+                        <p class="item-detail">SPINNER 45/16 DUCKY</p>
+                        <div class="price-wrap">
+                          <strong class="price">159,000</strong>
+                          <span class="sale">227,000</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <!-- e//: main -->
+
+  <!-- s: footer -->
+  <footer id="footer">
+    <div class="inner">
+      <div class="footer-menu-wrap">
+        <div class="footer-menu footer-menu-support">
+          <h5><a href="#">고객지원</a></h5>
+          <ul>
+            <li><a href="#">배송</a></li>
+            <li><a href="#">반품 및 환불</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">여행가방 잠금장치 설정안내</a></li>
+            <li><a href="#">단체구매 문의/ 대리점 개설 문의</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu footer-menu-company">
+          <h5><a href="#">회사소개</a></h5>
+          <ul>
+            <li><a href="#">브랜드 스토리</a></li>
+            <li><a href="#">매장 안내</a></li>
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">지속가능성</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu footer-menu-account">
+          <h5><a href="#">내 계정</a></h5>
+          <ul>
+            <li><a href="#">주문 상태 조회</a></li>
+            <li><a href="#">로그인하기</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu footer-menu-etc">
+          <h5><a href="#">기타</a></h5>
+          <ul>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">WORLDWIDE SITE</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-con-left">
+        <div class="foot-company">
+          <strong class="foot-logo"><i class="hidden">samsonite</i></strong>
+          <div class="foot-info">
+            <p>서울특별시 강남구 테헤란로 522 홍우빌딩 12층</p>
+            <p>
+              <span>쌤소나이트코리아(주) 대표이사 최원식</span>
+              <span>사업자등록번호 218-81-21342</span>
+            </p>
+            <p>
+              <span>고객센터 02-567-2486</span>
+              <span>FAX 02-539-7771</span>
+              <span>통신판매신고번호 제 2008-서울강남-00754호</span>
+            </p>
+            <p>E-mail help.kr@samsonite.com</p>
+          </div>
+        </div>
+        <ul class="foot-link">
+          <li><a href="#">정책</a></li>
+          <li><a href="#">이용약관 </a></li>
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">개인정보 수집 및 처리에 대한 동의</a></li>
+        </ul>
+      </div>
+      <div class="foot-con-right">
+        <div class="family-site-wrap">
+          <div class="btn-family-site">
+            <p>다른 브랜드 사이트</p>
+          </div>
+          <ul class="family-site-list">
+            <li><a href="#">American Tourister</a></li>
+            <li><a href="#">Gregory</a></li>
+          </ul>
+        </div>
+        <div class="sns-wrap">
+          <ul class="sns-list">
+            <li><a href="#"><i class="hidden">facebook</i></a></li>
+            <li><a href="#"><i class="hidden">instagram</i></a></li>
+            <li><a href="#"><i class="hidden">youtube</i></a></li>
+            <li><a href="#"><i class="hidden">blog</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //e: footer -->
+</body>

@@ -1,0 +1,1221 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Main */
+/* Section 001 : Visual */
+
+.visual .visual-wrap {
+  max-width: 192rem;
+  height: 74rem;
+
+  position: relative;
+  margin: 0 auto;
+}
+.visual-item,
+.visual-item figure,
+.visual-item figure img {
+  width: 100%;
+  height: 100%;
+}
+.visual-item figure img {
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+.visual-item::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--black40p);
+}
+.visual-title {
+  position: absolute;
+  top: 50%;
+  left: 17.0833%;
+  transform: translateY(-50%);
+
+  color: var(--white);
+  z-index: 1;
+}
+.visual-title h2 {
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 1.1;
+}
+.visual-title p {
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 3.2rem;
+}
+
+.visual-title .btn-link {
+  margin-top: 4rem;
+}
+
+/* Section 001 : visual indicator */
+.visual-control-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 6.7568%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  z-index: 2;
+}
+.visual-control-wrap a {
+  display: block;
+  /* border: 1px solid #000; */
+
+  background: var(--white50p);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+.visual-control-wrap a.active {
+  width: 5rem;
+  border-radius: 5rem;
+  background: var(--white);
+}
+
+/* Section 001 : visual button */
+.visual button {
+  width: 8rem;
+  /* width: 4.1667vw; */
+  height: 8rem;
+  /* height: 4.1667vw; */
+
+  border: 2px solid var(--white);
+  border-radius: 50%;
+
+  background: transparent no-repeat 50%;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: 0.4s;
+}
+/* visual button hover 애니메이션 */
+.visual button:hover {
+  border-color: var(--black);
+  background-color: var(--black);
+}
+
+.visual button.visual-prev {
+  background-image: url(../img/ico-prev-white.svg);
+  left: 6.25%;
+}
+.visual button.visual-next {
+  background-image: url(../img/ico-next-white.svg);
+  right: 6.25%;
+}
+
+/* Section 002 : weekly best item */
+.best-item {
+  padding: 10rem 0 12rem;
+  padding: 5.2083vw 0 6.25vw;
+}
+.best-item .inner {
+  position: relative;
+}
+.sec-title {
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+.tab-menu {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.tab-menu a {
+  display: block;
+  padding: 1rem 5rem;
+  border-radius: 5rem;
+  font-weight: 700;
+  font-size: 2rem;
+
+  border: 1px solid var(--black);
+  color: var(--black);
+
+  transition: 0.4s;
+}
+.tab-menu a.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* tab hover 애니메이션 */
+.tab-menu a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.tab-contents {
+  margin-top: 6rem;
+}
+.tab-contents ol {
+  display: flex;
+  gap: 5rem;
+  /* overflow-x: auto; */
+
+  counter-reset: process-count;
+}
+.tab-contents .best-item-list > li {
+  /* border: 1px solid #000; */
+  /* background: #5f5; */
+  flex-shrink: 0;
+  width: 35rem;
+  /* width: 18.2292%; */
+  height: 54.8rem;
+  /* 리스트의 크기는 고정된 상태에서 x축으로 넘어가도 상관 없는 형태가 될 것 같은데 %가 필요한지 아니면 aspect-ratio? */
+  /* aspect-ratio: 1/1.565714285714286; */
+
+  position: relative;
+  counter-increment: process-count;
+}
+
+.tab-contents .best-item-list > li::before {
+  content: counter(process-count);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  width: 5rem;
+  height: 5rem;
+  background: var(--black);
+  color: var(--white);
+  position: absolute;
+  z-index: 2;
+}
+
+/* .item-pic figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--white);
+}
+.item-pic figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 아이템 이미지에 hover 했을 때, 다른 시점의 이미지 호출 */
+/* keyframe으로 부드럽게 */
+/* .item-pic figure img:nth-child(1) {
+  display: block;
+  animation: itemhiddenAni 0.5s;
+  animation-fill-mode: both;
+}
+.item-pic figure img:nth-child(2) {
+  display: none;
+  animation: itemRevealAni 0.5s;
+  animation-fill-mode: both;
+}
+
+li:hover .item-pic figure img:nth-child(1) {
+  display: none;
+}
+
+li:hover .item-pic figure img:nth-child(2) {
+  display: block;
+}
+
+.item-info {
+  padding: 3rem 2rem 0;
+}
+.item-info .color-swatch {
+  display: flex;
+  gap: 1.5rem;
+}
+.item-info .color-swatch li {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.item-info .brand-name {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+.item-info .item-name {
+  font-weight: 600;
+  font-size: 2.7rem;
+  margin-top: -0.3rem;
+}
+.item-info .item-detail {
+  font-size: 1.2rem;
+}
+.item-info .price-wrap {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.item-info .price-wrap .price {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.item-info .price-wrap .sale {
+  color: var(--gray2);
+  text-decoration: line-through;
+}
+
+.btn-list-wrap {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+}
+.btn-basic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 2px solid var(--gray1);
+  background: var(--white) no-repeat 50%;
+}
+.btn-basic.btn-prev {
+  background-image: url(../img/ico-prev-gray.svg);
+}
+.btn-basic.btn-next {
+  background-image: url(../img/ico-next-gray.svg);
+}
+*/
+
+/* Section 003 : new arrival */
+.new-item {
+  padding: 10rem 0 12rem;
+  padding: 5.2083vw 0 6.25vw;
+}
+.new-item .inner {
+  position: relative;
+}
+.tab-contents .new-item-list {
+  display: flex;
+  gap: 5rem;
+  /* overflow-x: hidden; */
+}
+.tab-contents .new-item-list > li {
+  /* border: 1px solid #000; */
+  /* background: #5f5; */
+  flex-shrink: 0;
+  width: 35rem;
+  /* 위와 동일한 li형태들 */
+
+  position: relative;
+}
+
+/* Section 004 : shop the look */
+.theme {
+  padding: 12rem 0 17rem;
+  padding: 6.25vw 0 8.8542vw;
+}
+.theme-wrap {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+.theme-pic-wrap {
+  position: relative;
+  width: 40.9211%;
+}
+.theme-pic-wrap dl {
+  position: absolute;
+  top: 57.8778%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+
+  width: 46rem;
+  width: 73.955%;
+
+  color: var(--white);
+  z-index: 1;
+}
+.theme-pic-wrap dl dt {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.theme-pic-wrap dl dd {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+}
+.theme-pic-wrap ul li {
+  height: 62.2rem;
+}
+.theme-pic-wrap ul li:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--black10p);
+}
+
+.theme-pic-wrap .theme-pic-list figure,
+.theme-pic-wrap .theme-pic-list figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.theme-pic-wrap .theme-pic-list li:hover figure img {
+  transform: scale(1.1);
+}
+.theme-paging {
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0.2rem 1.5rem;
+  border-radius: 5rem;
+  color: var(--white70p);
+  background: var(--black50p);
+
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+.theme-pic-wrap button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.theme-pic-wrap button.btn-prev {
+  left: -4rem;
+}
+.theme-pic-wrap button.btn-next {
+  right: -4rem;
+}
+
+.theme-item-wrap {
+  /* width: 84.8rem; */
+  width: 55.7895%;
+}
+
+.theme-item-list {
+  display: flex;
+
+  overflow-x: hidden;
+  gap: 5rem;
+}
+.theme-item-list > li {
+  /* border: 1px solid #000; */
+  /* background: #5f5; */
+  flex-shrink: 0;
+  width: 35rem;
+
+  position: relative;
+}
+
+/* Section 005 : onlinemall benefit */
+.benefit {
+  background: var(--gray0);
+  padding: 14rem 0 20rem;
+  padding: 7.2917% 0 10.4167%;
+}
+.benefit-list {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  counter-reset: process-count;
+}
+.benefit-list li {
+  /* border: 1px solid #000; */
+  /* width: 36.4rem;
+  width: 23.9474%; */
+  flex: 1 1 30%;
+
+  padding: 1rem;
+  counter-increment: process-count;
+}
+
+.benefit-list li figure {
+  /* height: 25rem; */
+  aspect-ratio: 1/0.7267441860465116;
+  /* width: 100%;
+  height: 100%; */
+}
+.benefit-list li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.benefit-list li dl {
+  padding: 1rem 0 0;
+}
+.benefit-list li dl::before {
+  content: '0' counter(process-count);
+
+  font-size: 2.8rem;
+
+  font-weight: 700;
+  border-bottom: 3px solid var(--black);
+}
+.benefit-list li dl dt {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.benefit-list li dl dd {
+  margin-top: 2rem;
+}
+
+/* Section 006: explore */
+.explore-list {
+  height: 65rem;
+  display: flex;
+  position: relative;
+}
+.explore-list li {
+  width: 50%;
+  background: var(--black40p) no-repeat 50% / cover;
+  position: relative;
+}
+.explore-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background: #f00; */
+  position: relative;
+}
+.explore-list li::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+
+  backdrop-filter: blur(5px) opacity(0);
+  transition: 0.4s;
+}
+.explore-list li:hover::before {
+  backdrop-filter: blur(5px) opacity(1);
+}
+.explore-list li:hover .btn-link {
+  color: var(--white);
+  background: var(--black);
+}
+.explore-list li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--black50p);
+  pointer-events: none;
+  user-select: none;
+}
+
+.explore-list li:nth-child(1) {
+  background-image: url(../img/thumb-brand.jpg);
+}
+.explore-list li:nth-child(2) {
+  background-image: url(../img/thumb-monogram.png);
+}
+.explore-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  left: 20%;
+  color: var(--white);
+  z-index: 1;
+}
+.explore-title h4 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.explore-title h4 b {
+  display: block;
+}
+.explore-title p {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+}
+.explore-title span {
+  font-weight: 700;
+  margin-top: 5rem;
+}
+
+/* inner 크기에 맞는 분기점 추가 */
+@media (max-width: 1520px) {
+  /* .inner {
+    width: 94.1406%; /* 964px */
+  /* } */
+  /* .gnb li a {
+    padding: 1.3rem 6rem;
+    padding: 1.3rem 3.5rem;
+    padding: 1.3rem 2.8vw;
+  } */
+}
+/* 타블렛 크기 화면 */
+@media (max-width: 1024px) {
+  /* Header */
+  /* #header nav {
+    height: 6rem;
+    padding: 0;
+    flex-direction: row;
+  }
+  .logo a {
+    width: 17rem;
+    height: 4rem;
+    background: url(../img/logo.svg) no-repeat 50% / 75% auto;
+  }
+  .gnb {
+    display: none;
+  }
+  .util {
+    position: static;
+  }
+  .util button {
+    width: 4rem;
+    height: 4rem;
+
+    background: no-repeat 50% / 60% auto;
+  }
+  .util .btn-location {
+    display: none;
+  }
+  .util .btn-shopping {
+    display: none;
+  }
+  .util .btn-menu {
+    display: block;
+  } */
+
+  /* Main */
+  /* Section 001 : visual */
+  .visual .visual-wrap {
+    height: 55rem;
+    /* height: 53.7109vw; */
+  }
+  .visual-title {
+    left: 12.6953%;
+    width: 80%;
+  }
+  .visual-title h2 {
+    font-size: 5.4rem;
+  }
+  .visual-title p {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .visual-title .btn-link {
+    margin-top: 3rem;
+  }
+  .btn-link {
+    font-size: 1.6rem;
+  }
+  .visual button.visual-prev {
+    display: none;
+  }
+  .visual button.visual-next {
+    display: none;
+  }
+  .visual-control-wrap {
+    gap: 1.5rem;
+  }
+  .visual-control-wrap a {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  /* Section 002 : best-item */
+  /* Section 003 : new-item */
+  .best-item,
+  .new-item {
+    padding: 5rem 0 10rem;
+  }
+
+  .sec-title {
+    font-size: 2.4rem;
+  }
+
+  .tab-menu {
+    gap: 1rem;
+  }
+
+  .tab-menu a {
+    padding: 0.5rem 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .tab-contents ol,
+  .tab-contents .new-item-list,
+  .theme-item-list {
+    gap: 3rem;
+  }
+
+  .tab-contents .best-item-list > li,
+  .tab-contents .new-item-list > li,
+  .theme-item-list > li {
+    width: 22rem;
+    height: 37.1rem;
+  }
+  .tab-contents .best-item-list > li::before {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .item-info .color-swatch {
+    gap: 1rem;
+  }
+
+  .item-info .color-swatch li {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .item-info .brand-name {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .item-info .item-name {
+    font-size: 2rem;
+  }
+  .item-info .item-detail {
+    font-size: 1rem;
+  }
+  .item-info .price-wrap .price {
+    font-size: 1.6rem;
+  }
+
+  .item-info .price-wrap .sale {
+    font-size: 1.2rem;
+  }
+  .btn-list-wrap {
+    display: none;
+  }
+
+  /* Section 004 : shop the look */
+  .theme {
+    padding: 4.5rem 0 14rem;
+    /* padding: 4.5rem 0 13.6719vw; */
+  }
+  .theme .inner {
+    width: 100%;
+  }
+  .theme .sec-title {
+    margin-left: 2.9297%;
+  }
+  .theme-wrap {
+  }
+  .theme-item-list {
+    gap: 2.4rem;
+    height: 100%;
+  }
+  .theme-pic-wrap {
+    width: 49.0234%;
+  }
+  .theme-pic-wrap ul {
+    width: 100%;
+  }
+  .theme-pic-wrap ul li {
+    height: 45rem;
+    flex-grow: 1;
+    width: 100%;
+  }
+  .theme-pic-wrap dl {
+    text-align: center;
+    width: 80%;
+  }
+  .theme-pic-wrap dl dt {
+    top: 54%;
+    font-size: 3.6rem;
+    line-height: 1.1;
+  }
+  .theme-pic-wrap dl dd {
+    font-size: 1.6rem;
+  }
+  .theme-pic-wrap button {
+    display: none;
+  }
+  .theme-paging {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.4rem;
+    bottom: 6.6666%;
+  }
+
+  .theme-item-wrap {
+    /* width: 45%; */
+    width: 45.8984%;
+    margin-right: 2.9297%;
+  }
+
+  /* Section 005 : benefit */
+  .benefit {
+    padding: 5rem 0 14rem;
+  }
+  .benefit-list {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    row-gap: 4rem;
+  }
+  .benefit-list li {
+    flex: 1 1 40%;
+  }
+  .benefit-list li figure {
+    aspect-ratio: 1/0.5;
+  }
+
+  .benefit-list li dl::before {
+    font-size: 2.4rem;
+  }
+  .benefit-list li dl dt {
+    font-size: 2rem;
+  }
+  .benefit-list li dl dd {
+    font-size: 1.4rem;
+  }
+
+  /* Section 006 : explore */
+  .explore-list {
+    height: 50vw;
+  }
+  .explore-title {
+    left: 13.6719%;
+  }
+  .explore-title h4 {
+    font-size: 3.6rem;
+    /* font-size: 6.6406vw; */
+  }
+  .explore-title p {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .explore-title .btn-link {
+    padding: 1rem 5rem;
+    font-size: 1.4rem;
+    margin-top: 4rem;
+  }
+
+  /* Footer */
+  /* #footer {
+    padding: 7rem 2rem 8rem;
+  }
+  .footer-menu-wrap {
+    flex-wrap: wrap;
+    row-gap: 6rem;
+  }
+  .footer-menu-wrap .footer-menu {
+    flex: 1 1 40%;
+  }
+  .footer-menu-wrap .footer-menu h5 {
+    font-size: 1.6rem;
+  }
+  .footer-menu-wrap .footer-menu ul {
+    margin-top: 2rem;
+  }
+  .footer-menu-wrap .footer-menu ul li {
+    font-size: 1.4rem;
+  }
+
+  .foot-con-left {
+    margin-top: 8rem;
+  }
+  .foot-con-left .foot-company .foot-info {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+
+  }
+
+  .foot-con-left .foot-link {
+    font-size: 1.6rem;
+
+    row-gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .foot-con-left .foot-link li {
+
+    flex: 0 0 auto;
+  }
+
+  .foot-con-right {
+    flex-direction: row-reverse;
+    position: static;
+    justify-content: space-between;
+    margin-top: 8rem;
+
+  } */
+}
+/* 반응형을 위한 분기점 */
+@media (max-width: 620px) {
+  .theme-wrap {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 3rem;
+  }
+  .theme-pic-wrap {
+    width: 100%;
+  }
+  .theme-pic-wrap ul li {
+    height: 40rem;
+  }
+  /* .theme-pic-wrap dl {
+    top: 52.5%;
+  } */
+  .theme-pic-wrap dl dt {
+    font-size: 2.4rem;
+    font-size: 6.6vw;
+  }
+  .theme-pic-wrap dl dd {
+    font-size: 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  .theme-item-wrap {
+    width: 100%;
+    margin-left: 5.128205128205128%;
+  }
+  /* Section 005 : onlinemall benefit */
+  .benefit {
+    padding: 6rem 0 7rem;
+  }
+  .benefit-list li {
+    flex: 1 1 60%;
+    padding: 0;
+  }
+  .benefit-list li dl {
+    padding: 1rem 1rem 0;
+  }
+  .benefit-list li dl::before {
+    font-size: 1.8rem;
+    border-bottom-width: 2px;
+  }
+  .benefit-list li dl dt {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+  .benefit-list li dl dd {
+    margin-top: 1rem;
+  }
+  .explore-title h4 {
+    font-size: 5.5vw;
+  }
+
+  .explore-title p {
+    font-size: 3.3vw;
+  }
+  .explore-title .btn-link {
+    padding: 1.4vw 6vw;
+    margin-top: 2rem;
+    font-size: 2vw;
+  }
+  .foot-con-right {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+/* 모바일 화면 */
+@media (max-width: 450px) {
+  /* .inner {
+    width: 89.7436%;
+  } */
+  /* Header */
+  /* .logo a {
+    width: 12rem;
+    height: 3.8rem;
+    background: url(../img/logo.svg) no-repeat 50% / 90% auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .util {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .util button {
+    background: no-repeat 50% / 55% auto;
+  }
+  .util .btn-user {
+    display: none;
+  } */
+
+  /* Main */
+  /* Section 001 : visual */
+  .visual .visual-wrap {
+    height: 34rem;
+  }
+  .visual-title {
+    left: 10.5128%;
+    width: 80%;
+  }
+  .visual-title h2 {
+    font-size: 3.6rem;
+  }
+  .visual-title p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+  }
+  .visual-title p i {
+    display: block;
+  }
+  .visual-title .btn-link {
+    display: none;
+  }
+
+  .visual-control-wrap {
+    bottom: 7.3529%;
+    gap: 1rem;
+  }
+
+  .visual-control-wrap a {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  /* Section 002 : best-item */
+  /* Section 003 : new-item */
+  .best-item {
+    padding: 4rem 0 7rem;
+  }
+  .sec-title {
+    font-size: 2rem;
+  }
+  .tab-menu {
+    margin-top: 1rem;
+  }
+  .tab-menu a {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .tab-contents {
+    margin-top: 2rem;
+  }
+  .tab-contents ol,
+  .tab-contents .new-item-list,
+  .theme-item-list {
+    gap: 1rem;
+  }
+  .tab-contents .best-item-list > li,
+  .tab-contents .new-item-list > li,
+  .theme-item-list > li {
+    width: 15rem;
+    height: 27.1rem;
+  }
+
+  .tab-contents .best-item-list > li::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+  }
+  .item-info {
+    padding: 2rem 0 0;
+  }
+  .item-info .color-swatch {
+    gap: 0.7rem;
+  }
+
+  .item-info .color-swatch li {
+    width: 1rem;
+    height: 1rem;
+  }
+  .item-info .brand-name {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  .item-info .item-name {
+    font-size: 1.6rem;
+  }
+  .item-info .item-detail {
+    font-size: 0.8rem;
+  }
+  .item-info .price-wrap {
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+  .item-info .price-wrap .sale {
+    font-size: 1.2rem;
+  }
+
+  /* Section 003 : new item */
+  .new-item,
+  .theme {
+    padding: 0 0 7rem;
+  }
+  .theme .sec-title {
+    margin-left: 5.128205128205128%;
+  }
+  .theme-wrap {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 3rem;
+  }
+  .theme-pic-wrap {
+    width: 100%;
+  }
+  .theme-pic-wrap ul li {
+    height: 30rem;
+  }
+  .theme-pic-wrap dl {
+    top: 52.5%;
+  }
+  .theme-pic-wrap dl dt {
+    font-size: 2.4rem;
+  }
+  .theme-pic-wrap dl dd {
+    font-size: 1.2rem;
+  }
+
+  .theme-paging {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+  .theme-item-wrap {
+    width: 100%;
+    margin-left: 5.128205128205128%;
+  }
+
+  /* Section 005 : onlinemall benefit */
+  .benefit {
+    padding: 6rem 0 7rem;
+  }
+  .benefit-list li {
+    flex: 1 1 60%;
+    padding: 0;
+  }
+  .benefit-list li dl {
+    padding: 1rem 1rem 0;
+  }
+  .benefit-list li dl::before {
+    font-size: 1.8rem;
+    border-bottom-width: 2px;
+  }
+  .benefit-list li dl dt {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+  .benefit-list li dl dd {
+    margin-top: 1rem;
+  }
+
+  /* Section 006: explore */
+  .explore-list {
+    flex-direction: column;
+    height: 100%;
+  }
+  .explore-list li {
+    width: 100%;
+    height: 30rem;
+    /* height: 76.9231vw;
+    
+    */
+  }
+  .explore-title {
+    left: 15.3846%;
+  }
+  .explore-title h4 {
+    font-size: 2.4rem;
+  }
+  .explore-title p {
+    font-size: 1.4rem;
+  }
+  .explore-title .btn-link {
+    display: none;
+  }
+
+  /* Mobile - Footer */
+  /* #footer {
+    padding: 3rem 1rem 10rem;
+  }
+  .footer-menu-wrap {
+    border: 1px solid #fff;
+    flex-direction: row;
+    gap: 2rem 0.5rem;
+  }
+  .footer-menu-wrap .footer-menu {
+    border: 1px solid #fff;
+    flex: 1 1 5rem;
+  }
+  .footer-menu-wrap .footer-menu h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white70p);
+  }
+  .footer-menu-wrap .footer-menu ul {
+    display: none;
+  }
+  .foot-con-left {
+    margin-top: 4rem;
+  }
+  .foot-con-left .foot-company .foot-logo {
+    width: 10rem;
+    height: 2rem;
+    background-size: contain;
+  }
+  .foot-con-left .foot-company .foot-info {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+  #footer .foot-con-left .foot-company .foot-info p span {
+    padding: 0;
+    display: block;
+    border: none;
+    margin-top: 0.3rem;
+  }
+  .foot-con-left .foot-link {
+    font-size: 1.2rem;
+    margin-top: 7rem;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+  }
+  .foot-con-left .foot-link li {
+    border: 1px solid #fff;
+  }
+
+  .foot-con-left .foot-link li:nth-child(2) {
+    padding-right: 18rem;
+  }
+
+  .foot-con-right {
+    margin-top: 4rem;
+  }
+  .family-site-wrap {
+    display: none;
+  }
+  .sns-wrap {
+    margin: 0 auto;
+  }
+  .sns-list {
+    border: 1px solid #fff;
+    align-items: center;
+  }
+  .sns-list li a {
+    width: 4rem;
+    height: 4rem;
+  } */
+}

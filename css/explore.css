@@ -1,0 +1,33 @@
+/* Brand Story */
+/* Section 001: Sub-visual */
+.brand-story .sub-visual {
+  background-image: url(../img/sub-visual-brandstory.png);
+}
+
+/* Section 003 */
+.inner {
+  background: rgba(255, 255, 0, 0.2);
+}
+/* Section 003 - visual */
+.history-visual {
+  display: flex;
+}
+.history-visual-title {
+  display: flex;
+}
+.history-title-left span {
+  display: block;
+  width: 13rem;
+  height: 2rem;
+  background: #ff5 no-repeat 50% / cover;
+  background-image: url(../img/logo.svg);
+}
+
+.history-title-left h4 {
+  font-size: 7.6rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.2rem;
+  margin-top: 2rem;
+}
