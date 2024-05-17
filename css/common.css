@@ -81,6 +81,7 @@ body {
 #header nav {
   height: 16rem;
   /* border: 1px solid #000; */
+  /* width: 100%; */
   padding: 3.6rem 0 0 0;
 
   display: flex;
@@ -174,7 +175,7 @@ body {
 
 /* Gnb submenu animation */
 header.active::after {
-  top: -20rem;
+  height: 0;
 }
 
 .gnb .gnb-menu-luggage {
