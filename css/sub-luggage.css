@@ -121,7 +121,10 @@
   padding: 3rem 2.5rem;
   /* background: rgba(255, 255, 0, 0.2); */
   border-top: 1px solid var(--line2);
+  /* 최초의 필터가 보이지 않도록 작동 */
+  display: none;
 }
+
 .filter-con .filter-item strong {
   display: flex;
   padding: 0.5rem 3rem;
@@ -137,7 +140,13 @@
   width: 5rem;
   height: 5rem;
   background: url(../img/ico-filter-dropdown.svg) no-repeat 50%;
+
+  transition: 0.4s;
 }
+.filter-con .filter-item.active strong::after {
+  transform: rotate(180deg);
+}
+
 .filter-con .filter-item .filter-option-list {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 0.5rem));
