@@ -61,7 +61,10 @@
   border-top: 1px solid var(--line2);
   /* 최초의 필터가 보이지 않도록 작동 */
   display: none;
+
+  margin-top: -1px;
 }
+
 .filter-box {
   display: none;
 }
