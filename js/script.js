@@ -11,26 +11,32 @@ $(function () {
 
   $menu.on('mouseenter', function () {
     $(this).find($gnbDropdownWrap).stop().slideDown(duration);
-    $header.removeClass('active');
+    $header.addClass('active');
   });
 
   $menu.on('mouseleave', function () {
     $(this).find($gnbDropdownWrap).stop().slideUp(duration);
 
-    $header.addClass('active');
+    $header.removeClass('active');
   });
 
   // Sub
   // Luggage Filter
-  const $filterTitle = $('.filter-item');
-  const $filterCon = $('.filter-inner');
+  const $filterTitle = $('.filter-con .filter-item .filter-sub-title');
 
   $filterTitle.on('click', function () {
     // console.log($faqQ, $(this));
     // 클릭한 질문의 답변이 보여지게
-    $(this).find($filterCon).stop().slideToggle(duration);
+    // console.log('제발');
+    $(this).siblings().stop().slideToggle(duration);
 
     $(this).toggleClass('active');
-    // 클릭한 놈한테 on클래스 부여
+  });
+
+  // 필터 요소 누르면 색 활성화
+  const $filterItem = $('.filter-con .filter-item .filter-option-list li a');
+  $filterItem.on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
   });
 });

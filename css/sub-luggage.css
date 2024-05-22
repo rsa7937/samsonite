@@ -2,68 +2,6 @@
 .luggage .sub-visual {
   background-image: url(../img/sub-visual-luggage.png);
 }
-/* .sub-visual {
-  height: 32rem;
-  height: 20.6667vw;
-  background: no-repeat 50% / cover;
-}
-.sub-title {
-  color: var(--white);
-  text-align: right;
-
-  padding-top: 17rem;
-  padding-top: 9.66666666666667vw;
-}
-.sub-title h2 {
-  font-weight: 700;
-  font-size: 4.8rem;
-  font-size: 3.2vw;
-}
-.sub-title p {
-  font-size: 1.8rem;
-  font-size: 1.1842vw;
-} */
-
-/* Section 002 : breadcrumb  */
-/* .breadcrumb {
-  padding: 1.8rem 0;
-  border-bottom: 1px solid var(--line2);
-
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-.breadcrumb-detail {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.breadcrumb-detail a {
-  content: '';
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  background: no-repeat 50%;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/ico-home.svg);
-}
-.breadcrumb-detail strong {
-  display: flex;
-  gap: 0.5rem;
-  align-items: flex-end;
-}
-.breadcrumb-detail strong::before {
-  content: '';
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  background: no-repeat 50%;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/ico-breadcrumb.svg);
-} */
-
 /* Section 003 : luggage item */
 /*  Section 003-1 : Filter(left) */
 .luggage-item {
@@ -124,6 +62,9 @@
   /* 최초의 필터가 보이지 않도록 작동 */
   display: none;
 }
+.filter-box {
+  display: none;
+}
 
 .filter-con .filter-item strong {
   display: flex;
@@ -134,6 +75,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.filter-con .filter-item:last-of-type strong {
+  border-bottom: 1px solid var(--line2);
+}
 .filter-con .filter-item strong::after {
   content: '';
   display: block;
@@ -143,7 +87,10 @@
 
   transition: 0.4s;
 }
-.filter-con .filter-item.active strong::after {
+.filter-con .filter-item.active:last-of-type strong {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.filter-con .filter-item .filter-sub-title.active::after {
   transform: rotate(180deg);
 }
 
@@ -178,7 +125,7 @@
   white-space: nowrap;
 }
 
-.filter-con .filter-item .filter-option-list a.active {
+.filter-con .filter-item .filter-option-list li a.active {
   border: 1px solid var(--point-color2);
   background: var(--point-color2-10p);
 }
