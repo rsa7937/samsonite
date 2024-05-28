@@ -7,7 +7,7 @@ $(function () {
   const $menu = $('.gnb > li');
   const $gnbDropdownWrap = $('.gnb-dropdown-wrap');
 
-  const duration = 300;
+  const duration = 400;
 
   $menu.on('mouseenter', function () {
     $(this).find($gnbDropdownWrap).stop().slideDown(duration);

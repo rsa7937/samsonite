@@ -150,17 +150,23 @@ body {
 .gnb-dropdown-wrap {
   position: absolute;
   top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 
-  background: transparent;
+  background: rgba(250, 250, 250, 0);
   padding: 5rem;
   width: 100%;
   display: none;
   z-index: 2;
 }
+header.active .gnb-dropdown-wrap {
+  background: rgba(250, 250, 250, 1);
+}
 
 /* Gnb submenu animation */
 header.active::after {
   height: 36rem;
+  background: rgba(250, 250, 250, 1);
   /* display: none; */
 }
 
@@ -168,7 +174,7 @@ header.active::after {
 header::after {
   content: '';
   /* background: var(--gray0); */
-  background: #fafafa;
+  background: rgba(250, 250, 250, 1);
   width: 100%;
   height: 0;
   position: absolute;
@@ -176,7 +182,7 @@ header::after {
   left: 0;
 
   z-index: 10;
-  transition: 0.6s;
+  transition: 0.5s;
   /* display: none; */
 }
 
