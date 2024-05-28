@@ -10,12 +10,12 @@ $(function () {
   const duration = 400;
 
   $menu.on('mouseenter', function () {
-    $(this).find($gnbDropdownWrap).stop().slideDown(duration);
+    $(this).find($gnbDropdownWrap).stop().fadeIn(duration);
     $header.addClass('active');
   });
 
   $menu.on('mouseleave', function () {
-    $(this).find($gnbDropdownWrap).stop().slideUp(duration);
+    $(this).find($gnbDropdownWrap).stop().fadeOut(duration);
 
     $header.removeClass('active');
   });
