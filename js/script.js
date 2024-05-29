@@ -3,44 +3,17 @@ $(function () {
   // 대상을 변수에 저장
   // Main Common
   // Header
+  // PC
   const $header = $('header');
   // const $menu = $('.gnb > li');
   const $menu = $(
     '.gnb > li:nth-child(1), .gnb > li:nth-child(2), .gnb > li:nth-child(3), .gnb > li:nth-child(4), .gnb > li:nth-child(5) '
   );
   const $menuShort = $('.gnb > li:nth-child(6)');
-
-  const $menu1 = $('.gnb > li:nth-child(1)');
-  const $menu2 = $('.gnb > li:nth-child(2)');
-  const $menu3 = $('.gnb > li:nth-child(3)');
-  const $menu4 = $('.gnb > li:nth-child(4)');
-  const $menu5 = $('.gnb > li:nth-child(5)');
   const $gnbDropdownWrap = $('.gnb-dropdown-wrap');
-
   const duration = 300;
 
-  // Luggage 부터 Brand까지
-  // $menu1
-  //   .add($menu2)
-  //   .add($menu3)
-  //   .add($menu4)
-  //   .add($menu5)
-  //   .on('mouseenter', function () {
-  //     $(this).find($gnbDropdownWrap).stop().fadeIn(duration);
-  //     $header.addClass('active');
-  //   });
-
-  // $menu1
-  //   .add($menu2)
-  //   .add($menu3)
-  //   .add($menu4)
-  //   .add($menu5)
-  //   .on('mouseleave', function () {
-  //     $(this).find($gnbDropdownWrap).stop().fadeOut(duration);
-
-  //     $header.removeClass('active');
-  //   });
-
+  // 긴메뉴 : Luggage, Backapacks 등
   $menu.on('mouseenter', function () {
     $(this).find($gnbDropdownWrap).stop().fadeIn(duration);
     $header.addClass('active');
@@ -52,6 +25,7 @@ $(function () {
     $header.removeClass('active');
   });
 
+  // 짧은 메뉴 : explore
   $menuShort.on('mouseenter', function () {
     $(this).find($gnbDropdownWrap).stop().fadeIn(duration);
     $header.addClass('active1');
@@ -59,6 +33,29 @@ $(function () {
   $menuShort.on('mouseleave', function () {
     $(this).find($gnbDropdownWrap).stop().fadeOut(duration);
     $header.removeClass('active1');
+  });
+
+  // Tablet, Mobile menu
+  const $btnMenu = $('.btn-menu');
+  const $btnClose = $('.btn-close');
+  const $mMenu = $('.m-gnb-wrap');
+
+  $btnMenu.on('click', function () {
+    $mMenu.addClass('active');
+  });
+  $btnClose.on('click', function () {
+    $mMenu.removeClass('active');
+  });
+
+  // 모바일 메뉴 제목 클릭했을 때 아코디언
+  const $mGbnTitle = $('.m-gnb > li');
+  $mGbnTitle.on('click', function () {
+    $(this).find('strong').siblings().stop().slideToggle(duration);
+    $(this).toggleClass('active');
+  });
+
+  $('.m-gnb-sub > li > strong').on('click', function (e) {
+    e.stopPropagation();
   });
 
   // Main footer
@@ -78,7 +75,6 @@ $(function () {
     // 클릭한 질문의 답변이 보여지게
     // console.log('제발');
     $(this).siblings().stop().slideToggle(duration);
-
     $(this).toggleClass('active');
   });
 
