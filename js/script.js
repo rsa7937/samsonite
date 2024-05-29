@@ -61,6 +61,14 @@ $(function () {
     $header.removeClass('active1');
   });
 
+  // Main footer
+  $('.btn-family-site').on('click', function () {
+    $('.family-site-list').toggle();
+  });
+  $('.family-site-list > li').on('click', function () {
+    $('.family-site-list').hide();
+  });
+
   // Sub
   // Luggage Filter
   const $filterTitle = $('.filter-con .filter-item .filter-sub-title');
@@ -89,13 +97,17 @@ $(function () {
 
   // 정렬 팝업 on / off
   $('.item-sort-btn').on('click', function () {
-    $(this).find('.item-sort-list').stop().toggle();
+    $(this).find('.item-sort-list').toggle();
+    $('.item-sort-btn > button').toggleClass('active');
   });
 
-  $('.item-sort-list > li').on('click', function () {
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
+  $('.item-sort-list > li').on('click', function (e) {
+    // $(this).siblings().removeClass('active');
+    // $(this).addClass('active');
+    e.preventDefault();
+    const filterValue = $(this).text();
+    $('.item-sort-btn > button').text(filterValue);
 
-    $('.item-sort-list').stop().hide();
+    $('.item-sort-list').fadeOut();
   });
 });

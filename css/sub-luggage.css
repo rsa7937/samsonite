@@ -320,7 +320,7 @@ button.btn-slide-bar::before {
   /* gap: 5.5rem; */
   height: 7rem;
   justify-content: space-between;
-  width: 23rem;
+  min-width: 23rem;
   gap: 1rem;
 
   /* flex-shrink: 0; */
@@ -337,7 +337,6 @@ button.btn-slide-bar::before {
   background: var(--white);
   font-size: 1.4rem;
   font-weight: 800;
-
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -351,6 +350,9 @@ button.btn-slide-bar::before {
   height: 3rem;
   background: url(../img/ico-filter-dropdown.svg) no-repeat 50% / 50% auto;
 }
+.item-sort-btn button.active::after {
+  transform: rotate(180deg);
+}
 
 .item-sort-list {
   width: 100%;
@@ -361,13 +363,14 @@ button.btn-slide-bar::before {
   z-index: 3;
   border: 1px solid var(--line);
   background: var(--white);
-  /* display: none; */
+  display: none;
 }
 .item-sort-list li {
   padding: 1.2rem 2.2rem 1.2rem 3rem;
   border-bottom: 1px solid var(--line);
   /* background: var(--white); */
   font-size: 1.4rem;
+  transition: 0.4s;
 }
 .item-sort-list li a {
   display: block;
@@ -377,11 +380,13 @@ button.btn-slide-bar::before {
 .item-sort-list li:last-child {
   border: none;
 }
-.item-sort-list li.active {
-  color: var(--point-color);
+.item-sort-list li:hover {
   background: var(--gray0);
   /* font-size: 1.4rem; */
   font-weight: 800;
+}
+.item-sort-list li:hover a {
+  color: var(--point-color);
 }
 
 .item-sort-menu-mobile {
@@ -584,7 +589,9 @@ button.btn-slide-bar::before {
     font-size: 1rem;
     font-weight: 700;
     padding: 1rem 0rem 1rem 2rem;
+    min-width: 12rem;
   }
+
   .item-sort {
     width: 18rem;
     /* width: 27.027%; */
@@ -603,6 +610,7 @@ button.btn-slide-bar::before {
     width: 2rem;
     height: 2rem;
     background-size: 60% auto;
+    transform: rotate(0deg);
   }
 
   .luggage-item-list li .item-info {
