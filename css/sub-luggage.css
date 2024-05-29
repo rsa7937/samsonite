@@ -591,6 +591,10 @@ button.btn-slide-bar::before {
     gap: 2rem;
     justify-content: end;
   }
+
+  .item-sort-list {
+    display: none;
+  }
   .item-sort-list li {
     font-size: 1rem;
     padding: 1rem 2rem;
