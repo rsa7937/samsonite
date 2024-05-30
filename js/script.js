@@ -47,14 +47,20 @@ $(function () {
     $mMenu.removeClass('active');
   });
 
-  // 모바일 메뉴 제목 클릭했을 때 아코디언
-  const $mGbnTitle = $('.m-gnb > li');
-  $mGbnTitle.on('click', function () {
-    $(this).find('strong').siblings().stop().slideToggle(duration);
+  // 타블렛 & 모바일 메뉴 제목 클릭했을 때 아코디언
+  $('.m-gnb > li').on('click', function () {
+    $(this).find('.m-gnb-subwrap').stop().slideToggle(duration);
     $(this).toggleClass('active');
   });
 
-  $('.m-gnb-sub > li > strong').on('click', function (e) {
+  // 모바일의 소메뉴 제목 클릭했을 때 아코디언
+  $('.m-gnb-sub > li').on('click', function (e) {
+    e.stopPropagation();
+    $(this).find('.m-gnb-subcon').stop().slideToggle(duration);
+    $(this).toggleClass('active');
+  });
+  // 모바일 소메뉴 콘텐츠 클릭했을 때 토글 되는 현상 방지
+  $('.m-gnb-subcon').on('click', function (e) {
     e.stopPropagation();
   });
 
