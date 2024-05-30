@@ -509,7 +509,7 @@ header::after {
   padding: 0 4rem;
   border-bottom: 1px solid var(--line2);
 }
-.m-gnb > li.active > strong::after {
+.m-gnb > li > strong.active::after {
   transform: rotate(180deg);
 }
 
@@ -548,7 +548,7 @@ header::after {
   border-bottom: 1px solid var(--line);
   /* border-top: 1px solid var(--line); */
   background: var(--gray0);
-  pointer-events: none;
+
   background: red;
 }
 
@@ -1165,7 +1165,7 @@ li:hover .item-pic figure img:nth-child(2) {
     background: url(../img/ico-filter-dropdown.svg) no-repeat 50%;
     transition: 0.4s;
   }
-  .m-gnb-sub > li.active strong::after {
+  .m-gnb-sub > li strong.active::after {
     transform: rotate(180deg);
   }
   /* Footer */

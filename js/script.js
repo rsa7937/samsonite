@@ -61,6 +61,7 @@ $(function () {
 
     if (viewportWidth >= 450 && viewportWidth < 1024) {
       console.log('태블릿');
+      $('.m-gnb-sub > li > strong').next('.m-gnb-subcon').show();
       $('.m-gnb-sub > li > strong').off('click'); //클릭 이벤트 제거
     } else {
       console.log('태블릿 아님');
