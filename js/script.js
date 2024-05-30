@@ -47,7 +47,7 @@ $(function () {
   // 타블렛 & 모바일 메뉴 제목 클릭했을 때 아코디언
   $('.m-gnb > li > strong').on('click', function () {
     $(this).next('.m-gnb-subwrap').stop().slideToggle(duration);
-    $(this).toggleClass('active');
+    $(this).parent('li').toggleClass('active');
   });
 
   // 모바일에서 가능한 동작(subcon)이 타블렛에서는 불가능하도록 조치 취하기
@@ -69,7 +69,7 @@ $(function () {
         .off('click')
         .on('click', function () {
           $(this).next('.m-gnb-subcon').stop().slideToggle(duration);
-          $(this).toggleClass('active');
+          $(this).parent('li').toggleClass('active');
         });
     }
   }

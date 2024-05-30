@@ -509,7 +509,7 @@ header::after {
   padding: 0 4rem;
   border-bottom: 1px solid var(--line2);
 }
-.m-gnb > li > strong.active::after {
+.m-gnb > li.active > strong::after {
   transform: rotate(180deg);
 }
 
@@ -549,7 +549,7 @@ header::after {
   /* border-top: 1px solid var(--line); */
   background: var(--gray0);
 
-  background: red;
+  /* background: red; */
 }
 
 .m-gnb-sub > li > strong::after {
@@ -578,7 +578,7 @@ header::after {
   /* width: 20rem; */
   height: 4rem;
   padding: 0 1.6rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   font-size: 1.4rem;
   color: var(--gray3);
 }
@@ -1165,7 +1165,7 @@ li:hover .item-pic figure img:nth-child(2) {
     background: url(../img/ico-filter-dropdown.svg) no-repeat 50%;
     transition: 0.4s;
   }
-  .m-gnb-sub > li strong.active::after {
+  .m-gnb-sub > li.active strong::after {
     transform: rotate(180deg);
   }
   /* Footer */
