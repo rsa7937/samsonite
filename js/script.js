@@ -1,11 +1,8 @@
-// DOM 구조가 파악 되면 실행
 $(function () {
-  // 대상을 변수에 저장
   // Main Common
   // Header
   // PC
   const $header = $('header');
-  // const $menu = $('.gnb > li');
   const $menu = $(
     '.gnb > li:nth-child(1), .gnb > li:nth-child(2), .gnb > li:nth-child(3), .gnb > li:nth-child(4), .gnb > li:nth-child(5) '
   );
@@ -48,21 +45,37 @@ $(function () {
   });
 
   // 타블렛 & 모바일 메뉴 제목 클릭했을 때 아코디언
-  $('.m-gnb > li').on('click', function () {
-    $(this).find('.m-gnb-subwrap').stop().slideToggle(duration);
+  $('.m-gnb > li > strong').on('click', function () {
+    $(this).next('.m-gnb-subwrap').stop().slideToggle(duration);
     $(this).toggleClass('active');
   });
 
+  // 모바일에서 가능한 동작(subcon)이 타블렛에서는 불가능하도록 조치 취하기
   // 모바일의 소메뉴 제목 클릭했을 때 아코디언
-  $('.m-gnb-sub > li').on('click', function (e) {
-    e.stopPropagation();
-    $(this).find('.m-gnb-subcon').stop().slideToggle(duration);
-    $(this).toggleClass('active');
-  });
+  checkViewportWidth();
+  // 창이 resize될때마다 함수 다시 실행
+  $(window).on('resize', checkViewportWidth);
+
+  function checkViewportWidth() {
+    const viewportWidth = $(window).innerWidth();
+
+    if (viewportWidth >= 450 && viewportWidth < 1024) {
+      console.log('태블릿');
+      $('.m-gnb-sub > li > strong').off('click'); //클릭 이벤트 제거
+    } else {
+      console.log('태블릿 아님');
+      $('.m-gnb-sub > li > strong')
+        .off('click')
+        .on('click', function () {
+          $(this).next('.m-gnb-subcon').stop().slideToggle(duration);
+          $(this).toggleClass('active');
+        });
+    }
+  }
   // 모바일 소메뉴 콘텐츠 클릭했을 때 토글 되는 현상 방지
-  $('.m-gnb-subcon').on('click', function (e) {
-    e.stopPropagation();
-  });
+  // $('.m-gnb-subcon').on('click', function (e) {
+  //   e.stopPropagation();
+  // });
 
   // Main footer
   $('.btn-family-site').on('click', function () {
