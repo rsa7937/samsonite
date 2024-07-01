@@ -4,7 +4,9 @@ body {
 
 /* Main */
 /* Section 001 : Visual */
-
+.visual {
+  padding-top: 16rem;
+}
 .visual .visual-wrap {
   max-width: 192rem;
   height: 74rem;
@@ -12,12 +14,19 @@ body {
   position: relative;
   margin: 0 auto;
 }
+.visual .visual-wrap .visual-slide {
+  height: 100%;
+}
+
 .visual-item,
 .visual-item figure,
-.visual-item figure img {
+.visual-item figure img,
+.visual-item .visual-item video,
+.visual-item video {
   width: 100%;
   height: 100%;
 }
+.visual-item video,
 .visual-item figure img {
   object-fit: cover;
   object-position: 50% 70%;
@@ -43,13 +52,13 @@ body {
 }
 .visual-title h2 {
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 7.2rem;
   line-height: 1.1;
 }
 .visual-title p {
-  font-weight: 500;
-  margin-top: 1rem;
-  font-size: 3.2rem;
+  font-weight: 400;
+  margin-top: 1.6rem;
+  font-size: 2.4rem;
 }
 
 .visual-title .btn-link {
@@ -57,28 +66,9 @@ body {
 }
 
 /* Section 001 : visual indicator */
-.visual-control-wrap {
-  position: absolute;
-  left: 50%;
-  bottom: 6.7568%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  z-index: 2;
-}
-.visual-control-wrap a {
-  display: block;
-  /* border: 1px solid #000; */
-
-  background: var(--white50p);
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-}
-.visual-control-wrap a.active {
-  width: 5rem;
-  border-radius: 5rem;
-  background: var(--white);
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background: #fff;
 }
 
 /* Section 001 : visual button */
@@ -98,6 +88,7 @@ body {
   transform: translateY(-50%);
 
   transition: 0.4s;
+  z-index: 1;
 }
 /* visual button hover 애니메이션 */
 .visual button:hover {
@@ -114,10 +105,20 @@ body {
   right: 6.25%;
 }
 
+.visual .swiper-pagination-bullet {
+  transition: 0.4s;
+  margin: 0 0.6rem !important;
+}
+.visual .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 3rem;
+  border-radius: 4rem;
+}
+
 /* Section 002 : weekly best item */
 .best-item {
   padding: 10rem 0 12rem;
   padding: 5.2083vw 0 6.25vw;
+  /* position: relative; */
 }
 .best-item .inner {
   position: relative;
@@ -131,7 +132,7 @@ body {
   display: flex;
   gap: 2rem;
 }
-.tab-menu a {
+.tab-menu li a {
   display: block;
   padding: 1rem 5rem;
   border-radius: 5rem;
@@ -143,19 +144,20 @@ body {
 
   transition: 0.4s;
 }
-.tab-menu a.active {
+.tab-menu li.active a {
   background: var(--black);
   color: var(--white);
 }
 
 /* tab hover 애니메이션 */
-.tab-menu a:hover {
+.tab-menu li:hover a {
   background: var(--black);
   color: var(--white);
 }
 
 .tab-contents {
   margin-top: 6rem;
+  position: relative;
 }
 .tab-contents ol {
   display: flex;
@@ -195,6 +197,59 @@ body {
   z-index: 2;
 }
 
+.tab-con-inner {
+  width: 172rem;
+  margin: 0 auto;
+}
+.tab-contents .weekly-best-wrap {
+  position: relative;
+}
+.tab-contents .best-item-list {
+  /* overflow: auto; */
+}
+.tab-contents .swiper-slide {
+  /* border: 1px solid #000; */
+  /* background: #5f5; */
+  flex-shrink: 0;
+  width: 35rem;
+  /* width: 18.2292%; */
+  height: 54.8rem;
+  /* 리스트의 크기는 고정된 상태에서 x축으로 넘어가도 상관 없는 형태가 될 것 같은데 %가 필요한지 아니면 aspect-ratio? */
+  /* aspect-ratio: 1/1.565714285714286; */
+
+  position: relative;
+  counter-increment: process-count;
+}
+
+.tab-contents .swiper-slide .item-badge {
+  content: counter(process-count);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  width: 5rem;
+  height: 5rem;
+  background: var(--black);
+  color: var(--white);
+  position: absolute;
+  z-index: 2;
+}
+
+.swiper-scrollbar {
+  bottom: -4rem !important;
+  width: 152rem;
+  width: 100% !important;
+  /* height: 1rem; */
+  left: 50% !important;
+  transform: translateX(-50%);
+  /* border: 1px solid #000; */
+}
+.swiper-scrollbar-drag {
+  background: var(--black);
+}
 /* .item-pic figure {
   width: 100%;
   height: 100%;
@@ -611,6 +666,9 @@ li:hover .item-pic figure img:nth-child(2) {
 
   /* Main */
   /* Section 001 : visual */
+  .visual {
+    padding-top: 6rem;
+  }
   .visual .visual-wrap {
     height: 55rem;
     /* height: 53.7109vw; */
@@ -662,11 +720,14 @@ li:hover .item-pic figure img:nth-child(2) {
     gap: 1rem;
   }
 
-  .tab-menu a {
+  .tab-menu li a {
     padding: 0.5rem 2.5rem;
     font-size: 1.6rem;
   }
 
+  .tab-contents {
+    margin-top: 4rem;
+  }
   .tab-contents ol,
   .tab-contents .new-item-list,
   .theme-item-list {
@@ -675,14 +736,19 @@ li:hover .item-pic figure img:nth-child(2) {
 
   .tab-contents .best-item-list > li,
   .tab-contents .new-item-list > li,
-  .theme-item-list > li {
+  .theme-item-list > li,
+  .tab-contents .swiper-slide {
     width: 22rem;
     height: 37.1rem;
   }
-  .tab-contents .best-item-list > li::before {
+  .tab-contents .swiper-slide .item-badge {
     width: 3rem;
     height: 3rem;
     font-size: 1.6rem;
+  }
+
+  .swiper-scrollbar {
+    bottom: -6rem !important;
   }
 
   .item-info .color-swatch {

@@ -79,6 +79,14 @@ body {
 #header {
   position: relative;
   background: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+#header > .inner {
+  transition: 0.4s;
 }
 #header nav {
   height: 16rem;
@@ -95,6 +103,8 @@ body {
 
   background: var(--white);
   z-index: 20;
+
+  transition: 0.4s;
 }
 
 .logo a {
@@ -108,6 +118,8 @@ body {
   display: flex;
   position: relative;
   z-index: 11;
+  /* transition: 0.4s; */
+  border: 1px solid blue;
 }
 .gnb li a {
   /* border: 1px solid #000; */
@@ -117,6 +129,11 @@ body {
   /* width: 100%; */
   height: 5.2rem;
   /* height: 100%; */
+  border: 1px solid red;
+}
+
+.gnb li > a {
+  /* transition: 0.4s; */
 }
 .gnb li a b {
   display: flex;
@@ -161,9 +178,15 @@ body {
   display: none;
   z-index: 2;
 }
+
+#header.scroll .gnb-dropdown-wrap {
+  padding: 5rem 0;
+  width: 120%;
+}
 /* Gnb submenu animation */
 header.active::after {
   height: 36rem;
+  transition: 0.4s;
 }
 header.active1::after {
   height: 10rem;
@@ -197,6 +220,7 @@ header::after {
 .gnb .gnb-dropdown li strong {
   font-size: 1.4rem;
   font-weight: 700;
+  /* border: 1px solid #000; */
 }
 .gnb .gnb-dropdown li a {
   display: flex;
@@ -207,7 +231,9 @@ header::after {
   font-size: 1.4rem;
   color: var(--gray3);
   font-weight: 400;
+  /* border: 1px solid #000; */
 }
+
 .gnb .gnb-dropdown li a:hover {
   color: var(--point-color2);
 }
@@ -466,6 +492,47 @@ header::after {
   position: relative;
   display: none;
 }
+/* PC에서 스크롤할 때 변화하는 헤더 */
+#header.scroll > .inner {
+  width: 172.1rem;
+  width: 94% !important;
+  /* border: 1px solid #000; */
+}
+#header.scroll nav {
+  flex-direction: row;
+  padding: 0;
+  height: 8.5rem;
+  border: 1px solid #000;
+  justify-content: space-between;
+}
+#header.scroll nav .logo a {
+  width: 12rem;
+  /* width: 12vw; */
+  background: url(../img/logo.svg) no-repeat 50% / contain;
+}
+#header.scroll nav .util {
+  position: static;
+  gap: 1vw;
+}
+#header.scroll nav .gnb {
+  height: 100%;
+}
+#header.scroll nav .gnb li > a {
+  padding: 0 1.2vw;
+  font-size: 1.4rem;
+  height: 100%;
+}
+#header.scroll::after {
+  top: 8.5rem;
+}
+#header.scroll .util {
+  gap: 0.8vw;
+}
+#header.scroll .util button {
+  width: 4rem;
+  height: 4rem;
+  background-size: 60% auto;
+}
 
 /* 태블릿 메뉴 */
 .m-gnb-wrap {
@@ -669,6 +736,13 @@ li:hover .item-pic figure img:nth-child(1) {
 li:hover .item-pic figure img:nth-child(2) {
   display: block;
 }
+.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(1) {
+  display: none;
+}
+
+.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(2) {
+  display: block;
+}
 
 .item-info {
   padding: 3rem 2rem 0;
@@ -713,8 +787,9 @@ li:hover .item-pic figure img:nth-child(2) {
   display: flex;
   gap: 3rem;
   position: absolute;
-  top: 3rem;
+  top: -16rem;
   right: 0;
+  z-index: 2;
 }
 .btn-basic {
   width: 8rem;
@@ -1021,12 +1096,12 @@ li:hover .item-pic figure img:nth-child(2) {
 @media (max-width: 1024px) {
   /* Header */
   #header nav {
-    height: 6rem;
+    height: 7rem;
     padding: 0;
     flex-direction: row;
   }
   .logo a {
-    width: 17rem;
+    width: 17rem!;
     height: 4rem;
     background: url(../img/logo.svg) no-repeat 50% / 75% auto;
   }
