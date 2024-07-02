@@ -19,6 +19,41 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="./js/script.js"></script>
 </head>
+<script>
+  $(function () {
+    const themePicList = new Swiper('.theme-pic-list', {
+      loop: true,
+      loopedSlides: 6,
+      spaceBetween: 0,
+      slideToClickedSlide: true,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+    });
+    const themeItemList = new Swiper('.theme-item-list', {
+      // loop: true,
+      loopedSlides: 3,
+      spaceBetween: 50,
+      slideToClickedSlide: true,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        snapOnRelease: true,
+      },
+    });
+  })
+</script>
 
 <body>
   <!-- Slider main container -->
@@ -201,133 +236,130 @@
       </div>
     </div>
 
-    <ul class="new-item-list">
-      <li>
-        <a href="#">
-          <div class="item-pic">
-            <figure>
-              <img src="./img/new-item1.png" alt="NB X SAMSONITE 뉴발란스">
-              <img src="./img/new-item1-1.png" alt="NB X SAMSONITE 뉴발란스2">
-            </figure>
-          </div>
-          <div class="item-info">
-            <ul class="color-swatch">
-              <li class="mustard"><i class="hidden">MUSTARD</i></li>
-              <li class="black"><i class="hidden">BLACK</i></li>
-              <li class="olive"><i class="hidden">OLIVE</i></li>
-            </ul>
-            <p class="brand-name">SAMSONITE</p>
-            <h4 class="item-name">NB X SAMSONITE</h4>
-            <p class="item-detail">SPINNER 68/25 EXP V2</p>
-            <div class="price-wrap">
-              <strong class="price">399,000</strong>
-              <!-- <span class="sale">582,000</span> -->
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="item-pic">
-            <figure>
-              <img src="./img/new-item2.png" alt="PROXIS™">
-              <img src="./img/new-item2-1.png" alt="PROXIS™2">
-            </figure>
-          </div>
-          <div class="item-info">
-            <ul class="color-swatch">
-              <li class="silver"><i class="hidden">SILVER</i></li>
-              <li class="petrol-blue"><i class="hidden">PETROL BLUE</i></li>
-              <li class="lime"><i class="hidden">LIME</i></li>
-              <li class="black"><i class="hidden">BLACK</i></li>
-            </ul>
-            <p class="brand-name">SAMSONITE</p>
-            <h4 class="item-name">PROXIS™</h4>
-            <p class="item-detail">캐리어 69/25</p>
-            <div class="price-wrap">
-              <strong class="price">919,000</strong>
-              <!-- <span class="sale">582,000</span> -->
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="item-pic">
-            <figure>
-              <img src="./img/new-item3.png" alt="SHEFFIELD 셰필드">
-              <img src="./img/new-item3-1.png" alt="SHEFFIELD 셰필드2">
-            </figure>
-          </div>
-          <div class="item-info">
-            <ul class="color-swatch">
-              <li class="black"><i class="hidden">BLACK</i></li>
-            </ul>
-            <p class="brand-name">SAMSONITE</p>
-            <h4 class="item-name">SHEFFIELD</h4>
-            <p class="item-detail">BACKPACK</p>
-            <div class="price-wrap">
-              <strong class="price">399,000</strong>
-              <!-- <span class="sale">582,000</span> -->
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="item-pic">
-            <figure>
-              <img src="./img/new-item4.png" alt="JEFFERY 제프리">
-              <img src="./img/new-item4-1.png" alt="JEFFERY 제프리2">
-            </figure>
-          </div>
-          <div class="item-info">
-            <ul class="color-swatch">
-              <li class="black"><i class="hidden">BLACK</i></li>
-              <li class="sky-blue-print"><i class="hidden">SKY BLUE PRINT</i></li>
-              <li class="khaki"><i class="hidden">KHAKI
-                </i></li>
-            </ul>
-            <p class="brand-name">
-              SAMSONITE RED</p>
-            <h4 class="item-name">VICKSON</h4>
-            <p class="item-detail">3WAYS BACKPACK</p>
-            <div class="price-wrap">
-              <strong class="price">249,000</strong>
-              <!-- <span class="sale">582,000</span> -->
-            </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div class="item-pic">
-            <figure>
-              <img src="./img/new-item5.png" alt="ATTRIX 아트릭스">
-              <img src="./img/new-item5-1.png" alt="ATTRIX 아트릭스2">
-            </figure>
-          </div>
-          <div class="item-info">
-            <ul class="color-swatch">
-              <li class="steel-blue"><i class="hidden">STEEL BLUE</i></li>
-              <li class="basil-green"><i class="hidden">BASIL GREEN</i></li>
-              <li class="dune"><i class="hidden">DUNE</i></li>
-              <li class="red"><i class="hidden">RED</i></li>
-              <li class="anthracite"><i class="hidden">ANTHRACITE</i></li>
-            </ul>
-            <p class="brand-name">SAMSONITE</p>
-            <h4 class="item-name">ATTRIX</h4>
-            <p class="item-detail">SP. 55/20 EXP LENGTH 35CM</p>
-            <div class="price-wrap">
-              <strong class="price">656,100</strong>
-              <span class="sale">729,000</span>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
 
 
+  </section>
+
+
+  <section class="theme">
+    <div class="inner">
+      <h3 class="sec-title">SHOP THE LOOK</h3>
+      <div class="theme-wrap">
+
+        <div class="theme-pic-wrap">
+          <dl>
+            <dt>A POETIC JOURNEY</dt>
+            <dd>여행과 일상을 넘나들며 마주하는 <br>
+              다양한 순간들을 마치 한 편의 시처럼</dd>
+          </dl>
+          <div class="swiper theme-pic-list">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+              <div class="swiper-slide">
+                <figure><img src="./img/theme-main1.png" alt="A POETIC JOURNEY"></figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <button type="button" class="btn-basic btn-prev">
+            <i class="hidden">이전</i>
+          </button>
+          <button type="button" class="btn-basic btn-next">
+            <i class="hidden">다음</i>
+          </button>
+        </div>
+        <div class="theme-item-wrap">
+          <div class="swiper theme-item-list">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="item-pic">
+                    <figure>
+                      <img src="./img/theme-item1.png" alt="JEFFERY BACKPACK">
+                      <img src="./img/theme-item1-1.png" alt="JEFFERY BACKPACK2">
+                    </figure>
+                  </div>
+                  <div class="item-info">
+                    <ul class="color-swatch">
+                      <li class="khaki"><i class="hidden">KHAKI</i></li>
+                      <li class="navy"><i class="hidden">NAVY</i></li>
+                    </ul>
+                    <p class="brand-name">SAMSONITE</p>
+                    <h4 class="item-name">JEFFERY</h4>
+                    <p class="item-detail">BACKPACK M</p>
+                    <div class="price-wrap">
+                      <strong class="price">429,000</strong>
+                      <!-- <span class="sale">582,000</span> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="item-pic">
+                    <figure>
+                      <img src="./img/theme-item2.png" alt="JEFFERY BRIEFCASE">
+                      <img src="./img/theme-item2-1.png" alt="JEFFERY BRIEFCASE2">
+                    </figure>
+                  </div>
+                  <div class="item-info">
+                    <ul class="color-swatch">
+                      <li class="khaki"><i class="hidden">KHAKI</i></li>
+                      <li class="navy"><i class="hidden">NAVY</i></li>
+                    </ul>
+                    <p class="brand-name">SAMSONITE</p>
+                    <h4 class="item-name">JEFFERY</h4>
+                    <p class="item-detail">BRIEFCASE</p>
+                    <div class="price-wrap">
+                      <strong class="price">359,000</strong>
+                      <!-- <span class="sale">582,000</span> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <div class="item-pic">
+                    <figure>
+                      <img src="./img/theme-item3.png" alt="JEFFERY TOTE">
+                      <img src="./img/theme-item3-1.png" alt="JEFFERY TOTE2">
+                    </figure>
+                  </div>
+                  <div class="item-info">
+                    <ul class="color-swatch">
+                      <li class="khaki"><i class="hidden">KHAKI</i></li>
+                      <li class="navy"><i class="hidden">NAVY</i></li>
+                    </ul>
+                    <p class="brand-name">SAMSONITE</p>
+                    <h4 class="item-name">JEFFERY</h4>
+                    <p class="item-detail">TOTE</p>
+                    <div class="price-wrap">
+                      <strong class="price">359,000</strong>
+                      <!-- <span class="sale">582,000</span> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 

@@ -168,18 +168,6 @@ $(function () {
   // 공통 동작이 2번 일어나기 때문에 tabAction이라는 함수로 정의
   tabAction(0);
 
-  // 탭메뉴를 클릭했을 때,
-  tabMenuWB.on('click', function (e) {
-    // a의 기본 동작(링크 이동)을 막자
-    e.preventDefault();
-    // 클릭한 놈의 인덱스를 구해서 변수에 담고
-    const tabIdx = $(this).index();
-    tabAction(tabIdx);
-    // tabContentWB[tabIdx].find('.swiper').slideTo(0, 0, true);
-    // console.log($(tabContentWB[tabIdx]).find('.swiper'));
-    $(tabContentWB[tabIdx]).find('.swiper').slideTo(0, 0, true);
-  });
-
   function tabAction(index) {
     // 탭메뉴 활성화
     tabMenuWB.removeClass('active');
@@ -276,6 +264,17 @@ $(function () {
     observeParents: true,
   });
 
+  // 탭메뉴를 클릭했을 때,
+  tabMenuWB.on('click', function (e) {
+    // a의 기본 동작(링크 이동)을 막자
+    e.preventDefault();
+    // 클릭한 놈의 인덱스를 구해서 변수에 담고
+    const tabIdx = $(this).index();
+    tabAction(tabIdx);
+    const bestItemArr = [bestItemWhole, bestItemLuggage, bestItemBackpacks, bestItemBags];
+    bestItemArr[tabIdx].slideTo(0, 0);
+  });
+
   // New Arrival
   // 대상을 변수에 저장
   const tabMenuNA = $('.new-item .tab-menu > li');
@@ -292,6 +291,8 @@ $(function () {
     // 클릭한 놈의 인덱스를 구해서 변수에 담고
     const tabIdx = $(this).index();
     tabAction2(tabIdx);
+    const newItemArr = [newArrWhole, newArrLuggage, newArrBackpacks, newArrBags];
+    newItemArr[tabIdx].slideTo(0, 0);
     // tabContentNA[tabIdx].find('.swiper').slideTo(0, 0, true);
     // console.log($(tabContentNA[tabIdx]).find('.swiper'));
     // $(tabContentNA[tabIdx]).find('.swiper').slideTo(0, 0, true);
@@ -383,6 +384,39 @@ $(function () {
     },
     observer: true,
     observeParents: true,
+  });
+
+  // Theme
+  const themePicList = new Swiper('.theme-pic-list', {
+    loop: true,
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+    },
+    loopedSlides: 6,
+    spaceBetween: 0,
+    slideToClickedSlide: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.btn-next',
+      prevEl: '.btn-prev',
+    },
+  });
+  const themeItemList = new Swiper('.theme-item-list', {
+    // loop: true,
+    loopedSlides: 3,
+    spaceBetween: 30,
+    slideToClickedSlide: true,
+    slidesPerView: 'auto',
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      snapOnRelease: true,
+    },
   });
 
   // Main footer

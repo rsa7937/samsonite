@@ -119,7 +119,7 @@ body {
   position: relative;
   z-index: 11;
   /* transition: 0.4s; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .gnb li a {
   /* border: 1px solid #000; */
@@ -129,7 +129,7 @@ body {
   /* width: 100%; */
   height: 5.2rem;
   /* height: 100%; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .gnb li > a {
@@ -502,7 +502,7 @@ header::after {
   flex-direction: row;
   padding: 0;
   height: 8.5rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   justify-content: space-between;
 }
 #header.scroll nav .logo a {
@@ -736,11 +736,13 @@ li:hover .item-pic figure img:nth-child(1) {
 li:hover .item-pic figure img:nth-child(2) {
   display: block;
 }
-.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(1) {
+.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(1),
+.theme-item-wrap .swiper-slide:hover .item-pic figure img:nth-child(1) {
   display: none;
 }
 
-.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(2) {
+.tab-contents .swiper-slide:hover .item-pic figure img:nth-child(2),
+.theme-item-wrap .swiper-slide:hover .item-pic figure img:nth-child(2) {
   display: block;
 }
 

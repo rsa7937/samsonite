@@ -391,7 +391,10 @@ li:hover .item-pic figure img:nth-child(2) {
   width: 73.955%;
 
   color: var(--white);
-  z-index: 1;
+  z-index: 2;
+
+  pointer-events: none;
+  user-select: none;
 }
 .theme-pic-wrap dl dt {
   font-size: 4rem;
@@ -402,10 +405,12 @@ li:hover .item-pic figure img:nth-child(2) {
   margin-top: 1rem;
   font-size: 1.9rem;
 }
-.theme-pic-wrap ul li {
+.theme-pic-wrap ul li,
+.theme-pic-wrap .theme-pic-list .swiper-slide {
   height: 62.2rem;
 }
-.theme-pic-wrap ul li:after {
+.theme-pic-wrap ul li::after,
+.theme-pic-wrap .theme-pic-list .swiper-slide::after {
   content: '';
   display: block;
   width: 100%;
@@ -425,11 +430,12 @@ li:hover .item-pic figure img:nth-child(2) {
   transition: 0.4s;
   overflow: hidden;
 }
-.theme-pic-wrap .theme-pic-list li:hover figure img {
+.theme-pic-wrap .theme-pic-list li:hover figure img,
+.theme-pic-wrap .theme-pic-list .swiper-slide:hover figure img {
   transform: scale(1.1);
 }
-.theme-paging {
-  display: inline-flex;
+.swiper-pagination-fraction {
+  display: flex;
   gap: 1rem;
   padding: 0.2rem 1.5rem;
   border-radius: 5rem;
@@ -443,13 +449,14 @@ li:hover .item-pic figure img:nth-child(2) {
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
+  width: auto;
 }
 
 .theme-pic-wrap button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
 }
 .theme-pic-wrap button.btn-prev {
   left: -4rem;
@@ -468,14 +475,21 @@ li:hover .item-pic figure img:nth-child(2) {
 
   overflow-x: hidden;
   gap: 5rem;
+  position: relative;
+  height: 100%;
 }
-.theme-item-list > li {
+.theme-item-list > li,
+.theme-item-list .swiper-slide {
   /* border: 1px solid #000; */
   /* background: #5f5; */
   flex-shrink: 0;
   width: 35rem;
 
   position: relative;
+}
+
+.theme .swiper-scrollbar {
+  bottom: 0 !important;
 }
 
 /* Section 005 : onlinemall benefit */
@@ -733,11 +747,18 @@ li:hover .item-pic figure img:nth-child(2) {
   .theme-item-list {
     gap: 3rem;
   }
+  .theme-item-list {
+    padding-top: 7rem;
+  }
 
   .tab-contents .best-item-list > li,
   .tab-contents .new-item-list > li,
-  .theme-item-list > li,
+  .theme-item-list .swiper-slide,
   .tab-contents .swiper-slide {
+    width: 22rem;
+    height: 37.1rem;
+  }
+  .theme-item-list .swiper-slide {
     width: 22rem;
     height: 37.1rem;
   }
@@ -792,19 +813,16 @@ li:hover .item-pic figure img:nth-child(2) {
   .theme .sec-title {
     margin-left: 2.9297%;
   }
-  .theme-wrap {
-  }
-  .theme-item-list {
-    gap: 2.4rem;
-    height: 100%;
-  }
+
   .theme-pic-wrap {
     width: 49.0234%;
   }
-  .theme-pic-wrap ul {
+  .theme-pic-wrap ul,
+  .theme-pic-list {
     width: 100%;
   }
-  .theme-pic-wrap ul li {
+  .theme-pic-wrap ul li,
+  .theme-pic-list .swiper-slide {
     height: 45rem;
     flex-grow: 1;
     width: 100%;
@@ -824,7 +842,8 @@ li:hover .item-pic figure img:nth-child(2) {
   .theme-pic-wrap button {
     display: none;
   }
-  .theme-paging {
+  .theme-paging,
+  .swiper-pagination-fraction {
     padding: 0.2rem 1.2rem;
     font-size: 1.4rem;
     bottom: 6.6666%;
@@ -942,7 +961,10 @@ li:hover .item-pic figure img:nth-child(2) {
   .theme-pic-wrap {
     width: 100%;
   }
-  .theme-pic-wrap ul li {
+  .theme-pic-wrap .theme-pic-list {
+    width: 100%;
+  }
+  .theme-pic-wrap .theme-pic-list .swiper-slide {
     height: 40rem;
   }
   /* .theme-pic-wrap dl {
@@ -959,8 +981,21 @@ li:hover .item-pic figure img:nth-child(2) {
 
   .theme-item-wrap {
     width: 100%;
-    margin-left: 5.128205128205128%;
+    /* margin-left: 5.128205128205128%; */
+    width: 94.1406%;
+    /* background: rgba(255, 255, 0, 0.2); */
+    padding-left: 5.128205128205128%;
+    height: 42rem;
   }
+  .theme-item-list {
+    padding-top: 0;
+    /* border: 1px solid #000; */
+  }
+  .theme .swiper-scrollbar {
+    bottom: 0 !important;
+    z-index: 300;
+  }
+
   /* Section 005 : onlinemall benefit */
   .benefit {
     padding: 6rem 0 7rem;
@@ -1073,7 +1108,7 @@ li:hover .item-pic figure img:nth-child(2) {
   .tab-menu {
     margin-top: 1rem;
   }
-  .tab-menu a {
+  .tab-menu li a {
     padding: 0.6rem 1.5rem;
     font-size: 1.2rem;
   }
@@ -1086,9 +1121,11 @@ li:hover .item-pic figure img:nth-child(2) {
   .theme-item-list {
     gap: 1rem;
   }
-  .tab-contents .best-item-list > li,
-  .tab-contents .new-item-list > li,
-  .theme-item-list > li {
+  .theme-item-list {
+  }
+  .tab-contents .best-item-list .swiper-slide,
+  .tab-contents .new-item-list .swiper-slide,
+  .theme-item-list .swiper-slide {
     width: 15rem;
     height: 27.1rem;
   }
@@ -1128,10 +1165,10 @@ li:hover .item-pic figure img:nth-child(2) {
   }
 
   /* Section 003 : new item */
-  .new-item,
+  /* .new-item,
   .theme {
     padding: 0 0 7rem;
-  }
+  } */
   .theme .sec-title {
     margin-left: 5.128205128205128%;
   }
@@ -1156,7 +1193,8 @@ li:hover .item-pic figure img:nth-child(2) {
     font-size: 1.2rem;
   }
 
-  .theme-paging {
+  .theme-paging,
+  .swiper-pagination-fraction {
     padding: 0.2rem 1rem;
     font-size: 1rem;
     gap: 0.8rem;

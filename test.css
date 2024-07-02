@@ -1,0 +1,41 @@
+section {
+  height: 200vh;
+  width: 100vw;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.section1 {
+  background: red;
+}
+.section2 {
+  height: 100vh;
+  background: pink;
+}
+
+.wrap {
+  padding: 5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-con {
+  border: 1px solid #000;
+  background: rgba(255, 255, 0, 0.2);
+}
+.title {
+}
+.title h2 {
+  font-size: 7rem;
+  font-weight: 700;
+}
+.title p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.section3 {
+  background: navy;
+}
