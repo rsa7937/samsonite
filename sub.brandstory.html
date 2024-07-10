@@ -9,8 +9,16 @@
   <link rel="shortcut icon" href="favicon.png" type="image/png">
 
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/explore.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -25,72 +33,254 @@
         </h1>
         <ul class="gnb">
           <li>
-            <span><a href="./sub-luggage.html">LUGGAGE</a></span>
-            <ul class="gnb-dropdown gnb-menu-luggage">
-              <li>
-                <strong>소재</strong>
-                <div class="gnb-material">
-                  <a href="#">하드케이스</a>
-                  <a href="#">소프트 케이스</a>
-                  <a href="#">알루미늄</a>
-                </div>
-                <a href="#" class="gnb-link">여행가방 모두 보기</a>
-              </li>
-              <li>
-                <strong>크기</strong>
-                <div class="gnb-size">
-                  <a href="#">기내용</a>
-                  <a href="#">중형수하물</a>
-                  <a href="#">대형수하물</a>
-                </div>
-              </li>
-              <li>
-                <strong>색상</strong>
-                <div class="gnb-color">
-                  <a href="#">모노톤</a>
-                  <a href="#">쿨톤</a>
-                  <a href="#">웜톤</a>
-                </div>
-              </li>
-              <li>
-                <strong>주요 기능</strong>
-                <div class="gnb-function">
-                  <a href="#">이중코일지퍼</a>
-                  <a href="#">자동제어장치</a>
-                  <a href="#">지문인식잠금</a>
-                  <a href="#">마그네틱 지퍼</a>
-                  <a href="#">돌출 잠금</a>
-                  <a href="#">서스펜션 휠</a>
-                  <a href="#">USB 포트</a>
-                  <a href="#">내장형 저울</a>
-                </div>
-              </li>
-              <li>
-                <strong>브랜드</strong>
-                <div class="gnb-brand">
-                  <a href="#"><i class="hidden">Samsonite</i></a>
-                  <a href="#"><i class="hidden">Samsonite Blacklabel</i></a>
-                  <a href="#"><i class="hidden">Samsonite Red</i></a>
-                </div>
-              </li>
-              <li>
-                <strong>Collection</strong>
-                <div class="gnb-collection">
-                  <a href="#">Richmon II</a>
-                  <a href="#">SBL Re. classic</a>
-                  <a href="#">C-Lite</a>
-                  <a href="#">Upscape</a>
-                  <a href="#">Toiis Blossom</a>
-                </div>
-              </li>
-            </ul>
+            <a href="sub-luggage.html"><b>LUGGAGE</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-luggage">
+                <li>
+                  <strong>소재</strong>
+                  <div class="gnb-material">
+                    <a href="#">하드케이스</a>
+                    <a href="#">소프트 케이스</a>
+                    <a href="#">알루미늄</a>
+
+                    <p class="gnb-link"><a href="#">여행가방 모두 보기</a></p>
+                  </div>
+                </li>
+                <li>
+                  <strong>크기</strong>
+                  <div class="gnb-size">
+                    <a href="#">기내용</a>
+                    <a href="#">중형수하물</a>
+                    <a href="#">대형수하물</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>색상</strong>
+                  <div class="gnb-color">
+                    <a href="#">모노톤</a>
+                    <a href="#">쿨톤</a>
+                    <a href="#">웜톤</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">색상 모두 보기</a></p>
+                </li>
+                <li>
+                  <strong>주요 기능</strong>
+                  <div class="gnb-function">
+                    <a href="#">이중코일지퍼</a>
+                    <a href="#">자동제어장치</a>
+                    <a href="#">지문인식잠금</a>
+                    <a href="#">마그네틱 지퍼</a>
+                    <a href="#">돌출 잠금</a>
+                    <a href="#">서스펜션 휠</a>
+                    <a href="#">USB 포트</a>
+                    <a href="#">내장형 저울</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>브랜드</strong>
+                  <div class="gnb-brand">
+                    <a href="#"><i class="hidden">Samsonite</i></a>
+                    <a href="#"><i class="hidden">Samsonite Blacklabel</i></a>
+                    <a href="#"><i class="hidden">Samsonite Red</i></a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Collection</strong>
+                  <div class="gnb-collection">
+                    <a href="#">Richmon II</a>
+                    <a href="#">SBL Re. classic</a>
+                    <a href="#">C-Lite</a>
+                    <a href="#">Upscape</a>
+                    <a href="#">Toiis Blossom</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li><span><a href="#">BACKPACKS</a></span></li>
-          <li><span><a href="#">BAGS</a></span></li>
-          <li><span><a href="#">ACCESSORIES</a></span></li>
-          <li><span><a href="#">BRANDS</a></span></li>
-          <li><span><a href="#">EXPLORE</a></span></li>
-          <li><span><a href="#">PROMOTION</a></span></li>
+          <li>
+            <a href="#"><b>BACKPACKS</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-backpacks">
+                <li>
+                  <strong>종류</strong>
+                  <div class="gnb-type">
+                    <a href="#">비즈니스</a>
+                    <a href="#">캐주얼</a>
+                    <a href="#">여성</a>
+                    <a href="#">키즈</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">백팩 모두 보기</a></p>
+                </li>
+                <li>
+                  <strong>색상</strong>
+                  <div class="gnb-color">
+                    <a href="#">모노톤</a>
+                    <a href="#">쿨톤</a>
+                    <a href="#">웜톤</a>
+
+                  </div>
+                  <p class="gnb-link"><a href="#">색상 모두 보기</a></p>
+                </li>
+                <li>
+                  <strong>주요 기능</strong>
+                  <div class="gnb-function">
+                    <a href="#">RFID 기능 포켓</a>
+                    <a href="#">USB 포트</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>브랜드</strong>
+                  <div class="gnb-brand">
+                    <a href="#"><i class="hidden">Samsonite</i></a>
+                    <a href="#"><i class="hidden">Samsonite Blacklabel</i></a>
+                    <a href="#"><i class="hidden">Samsonite Red</i></a>
+                  </div>
+                </li>
+                <li>
+                  <strong>노트북</strong>
+                  <div class="gnb-latop">
+                    <a href="#">13"</a>
+                    <a href="#">15"</a>
+                    <a href="#">17"</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Collection</strong>
+                  <div class="gnb-collection">
+                    <a href="#">SBL Mohave</a>
+                    <a href="#">Spectrolite 3</a>
+                    <a href="#">Marston</a>
+                    <a href="#">Jefferson</a>
+                    <a href="#">Candyce</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#"><b>BAGS</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-bags">
+                <li>
+                  <strong>종류</strong>
+                  <div class="gnb-type">
+                    <a href="#">서류가방</a>
+                    <a href="#">크로스백</a>
+                    <a href="#">슬링백</a>
+                    <a href="#">토트백</a>
+                    <a href="#">여성</a>
+                    <a href="#">보스턴백</a>
+                    <a href="#">힙색</a>
+                    <a href="#">골프</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">가방 모두 보기</a></p>
+                </li>
+                <li>
+                  <strong>색상</strong>
+                  <div class="gnb-color">
+                    <a href="#">모노톤</a>
+                    <a href="#">쿨톤</a>
+                    <a href="#">웜톤</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">색상 모두 보기</a></p>
+                </li>
+                <li>
+                  <strong>브랜드</strong>
+                  <div class="gnb-brand">
+                    <a href="#"><i class="hidden">Samsonite</i></a>
+                    <a href="#"><i class="hidden">Samsonite Blacklabel</i></a>
+                    <a href="#"><i class="hidden">Samsonite Red</i></a>
+                  </div>
+                </li>
+                <li>
+                  <strong>노트북</strong>
+                  <div class="gnb-latop">
+                    <a href="#">13"</a>
+                    <a href="#">15"</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Collection</strong>
+                  <div class="gnb-collection">
+                    <a href="#">Tanny</a>
+                    <a href="#">Abbey</a>
+                    <a href="#">Blackjack</a>
+                    <a href="#">Candyce</a>
+                    <a href="#">Osler</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#"><b>ACCESSORIES</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-accessories">
+                <li>
+                  <strong>종류</strong>
+                  <div class="gnb-type">
+                    <a href="#">지갑 및 벨트</a>
+                    <a href="#">파우치</a>
+                    <a href="#">여권지갑</a>
+                    <a href="#">러기지 커버</a>
+                    <a href="#">목베개</a>
+                    <a href="#">자물쇠</a>
+                    <a href="#">러기지 택</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">액세서리 모두 보기</a></p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#"><b>BRANDS</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-brand">
+                <li>
+                  <a href="#">
+                    <img src="./img/gnb-brand-thumb1.jpeg" alt="">
+                    <i class="hidden">samsonite blacklabel</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/gnb-brand-thumb2.jpeg" alt="">
+                    <i class="hidden">samsonite</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/gnb-brand-thumb3.jpeg" alt="">
+                    <i class="hidden">samsonite red</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#"><b>EXPLORE</b></a>
+            <div class="gnb-dropdown-wrap">
+              <ul class="gnb-dropdown gnb-menu-explore">
+                <li><a href="#">최신소식</a>
+                  <!-- <strong>최신소식</strong>
+                  <div class="gnb-news">
+                    <a href="#">Wedding and Honeymoon</a>
+                    <a href="#">Travel Hard, Travel Smart</a>
+                    <a href="#">Your Business Look</a>
+                    <a href="#">Your Backpack Look</a>
+                    <a href="#">Lavish Travels</a>
+                    <a href="#">Packing의 미학</a>
+                    <a href="#">Take flight</a>
+                  </div>
+                  <p class="gnb-link"><a href="#">최신 뉴스 모두 보기</a></p> -->
+                </li>
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">브랜드 라인</a></li>
+                <li><a href="#">SHOP THE LOOK</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#"><b>PROMOTION</b></a></li>
         </ul>
         <div class="util">
           <button type="button" class="btn-user">
@@ -153,10 +343,12 @@
           <div class="history-visual-title">
             <div class="history-title-left">
               <span><i class="hidden">logo</i></span>
-              <h4>Empowering Your Journey</h4>
+              <h4>Empowering
+                <br>Your Journey
+              </h4>
             </div>
             <div class="history-title-right">
-              <p>since 1910</p>
+              <span>since 1910</span>
             </div>
           </div>
           <div class="history-visual-img">
@@ -198,7 +390,7 @@
         </div>
 
         <!-- 1986 -->
-        <div class="history-con">
+        <div class="history-con con-1986">
           <div class="history-img-wrap img-1986">
             <figure>
               <img src="./img/brandstory/brandstory2.png" alt="">
@@ -209,7 +401,8 @@
               <h5>1986</h5>
               <a href="#" class="btn-arrow"><i class="hidden">arrow</i></a>
             </div>
-            <p>3가지 잠금장치를 갖춘 'Oyster (오이스터)' 캐리어를 출시했습니다.</p>
+            <p>3가지 잠금장치를 갖춘 <br>
+              'Oyster (오이스터)' 캐리어를 출시했습니다.</p>
           </div>
         </div>
 
@@ -230,10 +423,10 @@
         </div>
 
         <!-- 2008 -->
-        <div class="history-con">
+        <div class="history-con con-2008">
           <div class="history-img-wrap img-2008">
             <figure>
-              <img src="./img/brandstory/brandstory4-1.png" alt="">
+              <img src="./img/brandstory/brandstory4.png" alt="">
             </figure>
           </div>
           <div class="history-info info-2008">
@@ -246,7 +439,7 @@
         </div>
 
         <!-- 2015 -->
-        <div class="history-con">
+        <div class="history-con con-2015">
           <div class="history-img-wrap img-2015">
             <figure>
               <img src="./img/brandstory/brandstory5-1.png" alt="">
@@ -279,7 +472,7 @@
 
 
         <!-- 2020 -->
-        <div class="history-con">
+        <div class="history-con con-2020">
           <div class="history-img-wrap img-2020">
             <figure>
               <img src="./img/brandstory/brandstory7.jpg" alt="">
@@ -295,7 +488,7 @@
         </div>
 
         <!-- 2024 -->
-        <div class="history-con">
+        <div class="history-con con-2024">
           <div class="history-img-wrap img-2024">
             <figure>
               <img src="./img/brandstory/brandstory8.jpg" alt="">
@@ -309,13 +502,13 @@
             <p>1910년 탄생 이후 이노베이션에 대한 철학을 바탕으로 지난 110년에 걸쳐
               찬란한 헤리티지를 이어 온 쌤소나이트는 앞으로도 ‘책임 있는 여정’을 계속해서 이어나갈 것입니다.
             </p>
-            <p>쌤소나이트는 당신의 여정에 늘 함께 하겠습니다.</p>
+            <p><strong>쌤소나이트는 당신의 여정에 늘 함께 하겠습니다.</strong></p>
           </div>
         </div>
       </div>
     </section>
     <section class="banner">
-      <div class="banner-wrap">
+      <div class="banner-pic">
         <figure>
           <img src="./img/brandstory/brandstory9.png" alt="">
         </figure>
