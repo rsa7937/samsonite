@@ -13,7 +13,8 @@
 }
 /* Section 003 - visual */
 .history-visual {
-  padding: 0 10.6rem 10.6rem 10.6rem;
+  padding: 0 8.8rem;
+  height: 35rem;
   display: flex;
   justify-content: space-between;
 }
@@ -30,20 +31,22 @@
   display: block;
   width: 13rem;
   height: 2rem;
-  background: #ff5 no-repeat 50% / cover;
+  background: #ff5 no-repeat 50% / contain;
   background-image: url(../img/logo.svg);
 }
 
 .history-title-left h4 {
   font-size: 7.6rem;
+  font-size: 3.8vw;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 1px solid #000;
 }
 .history-title-right span {
+  font-size: 1.4rem;
 }
 .history-visual-img {
   width: 50%;
@@ -68,6 +71,7 @@
 .history-con {
   width: 100%;
   height: 35rem;
+  gap: 4.8rem;
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
@@ -115,11 +119,11 @@
   color: var(--black50p);
   margin-bottom: -2.8rem;
 }
-.btn-arrow {
-  width: 9rem;
-  height: 9rem;
+.btn-arrow {.con-1910 .history-img-wrap
+  width: 8.4rem;
+  height: 8.4rem;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2.4px solid #000;
   background: url(../img/brandstory/ico-arrow-b-big.svg) no-repeat 50%;
 }
 
@@ -347,7 +351,7 @@
 .img-2024 figure img {
 }
 .info-2024 {
-  padding-right: 10rem;
+  /* padding-right: 10rem; */
   width: 50% !important;
 }
 .info-2024 .history-info-year h5::before {
@@ -387,8 +391,8 @@
   text-align: center;
   z-index: 1000;
   border: 1px solid #000;
-  mix-blend-mode: difference;
-  background: #000;
+  /* mix-blend-mode: difference; */
+  /* background: #000; */
 }
 
 .banner-text p {
@@ -400,7 +404,7 @@
 
 .banner-text span {
   display: block;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   width: 25rem;
   height: 4rem;
   margin: 0 auto;
@@ -418,4 +422,140 @@
 .banner-text a:hover {
   color: var(--white);
   background: var(--point-color);
+}
+
+/* 타블렛 */
+@media (max-width: 1024px) {
+  .history {
+    padding: 6rem 0;
+  }
+  .history-visual {
+    padding: 0;
+    flex-direction: column-reverse;
+    gap: 2.4rem;
+  }
+  .history-visual-img {
+    width: 100%;
+    height: 20rem;
+  }
+  .history-visual-img figure img {
+    object-position: 0% 30%;
+  }
+
+  .history-visual-title {
+    width: 100%;
+  }
+  .history-title-left span {
+    width: 10rem;
+    height: 1.6rem;
+  }
+  .history-title-left h4 {
+    font-size: 5.2rem;
+  }
+  .history-title-right span {
+    font-size: 1.4rem;
+  }
+  .history-con {
+    height: 25rem;
+    gap: 2.8rem;
+  }
+
+  .history-con .history-img-wrap {
+    width: 63.5rem;
+    width: 65.9398%;
+  }
+
+  .history-info {
+    width: 28rem;
+    width: 29.0758%;
+    width: 36%;
+    padding: 0;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+  }
+
+  .history-info .history-info-year h5::before {
+    font-size: 2.8rem;
+    margin-bottom: -2rem;
+  }
+  .history-info .history-info-year h5 {
+    font-size: 4.2rem;
+    border: 1px solid #000;
+  }
+  .btn-arrow {
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid #000;
+    background: url(../img/brandstory/ico-arrow-b-mid.svg) no-repeat 50%;
+  }
+
+  .history-info p {
+    font-size: 1.4rem;
+  }
+  .history-info p:first-of-type {
+    margin-top: 2rem;
+  }
+
+  .info-1962,
+  .info-2008,
+  .info-2020 {
+    height: 100%;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    justify-content: center;
+  }
+
+  .info-1962,
+  .info-2008,
+  .info-2020 {
+    right: 5rem;
+    width: 60%;
+  }
+  .info-1986,
+  .info-2000,
+  .info-2015,
+  .info-2017 {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .banner-pic figure {
+    height: 40rem;
+  }
+  .banner-pic figure img {
+    object-position: -20% 80%;
+  }
+  .banner-text p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.8rem;
+  }
+  .banner-text span {
+    width: 17rem;
+    margin-top: 1rem;
+    height: 4.5rem;
+    background: url(../img/logo.svg) no-repeat 50% / contain;
+  }
+
+  .banner-text a {
+    font-size: 1.4rem;
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .con-1910 {
+    height: auto;
+    flex-direction: column;
+  }
+  .con-1910 .history-img-wrap {
+    width: 100%;
+    height: 25rem;
+  }
+  .info-1910 {
+    width: 100%;
+  }
 }
