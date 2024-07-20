@@ -184,6 +184,10 @@ body {
   padding: 5rem 0;
   width: 120%;
 }
+#header.scroll .gnb-dropdown-wrap.short {
+  padding: 1rem 0;
+  /* border: 1px solid #000; */
+}
 /* Gnb submenu animation */
 header.active::after {
   height: 36rem;
@@ -1184,6 +1188,13 @@ li:hover .item-pic figure img:nth-child(2) {
     /* border: 1px solid #fff; */
   }
 }
+@media (max-width: 680px) {
+  .foot-con-right {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
+
 /* 모바일 화면 */
 @media (max-width: 450px) {
   .inner {

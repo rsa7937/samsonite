@@ -9,7 +9,7 @@
   padding: 10rem 0;
 }
 .inner {
-  background: rgba(255, 255, 0, 0.2);
+  /* background: rgba(255, 255, 0, 0.2); */
 }
 /* Section 003 - visual */
 .history-visual {
@@ -21,7 +21,7 @@
 .history-visual-title {
   display: flex;
   align-items: flex-end;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   gap: 1rem;
   width: 50%;
 }
@@ -31,7 +31,7 @@
   display: block;
   width: 13rem;
   height: 2rem;
-  background: #ff5 no-repeat 50% / contain;
+  background: no-repeat 50% / contain;
   background-image: url(../img/logo.svg);
 }
 
@@ -43,7 +43,7 @@
   text-transform: uppercase;
   letter-spacing: -0.2rem;
   margin-top: 1rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .history-title-right span {
   font-size: 1.4rem;
@@ -87,7 +87,7 @@
   width: 100%;
   /* width: 100.6rem; */
   height: 100%;
-  background: rgba(255, 255, 0, 0.2);
+  /* background: rgba(255, 255, 0, 0.2);   */
   overflow: hidden;
 }
 .history-con .history-img-wrap figure img {
@@ -119,7 +119,7 @@
   color: var(--black50p);
   margin-bottom: -2.8rem;
 }
-.btn-arrow {.con-1910 .history-img-wrap
+.btn-arrow {
   width: 8.4rem;
   height: 8.4rem;
   border-radius: 50%;
@@ -156,7 +156,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 .img-1962 img {
@@ -214,7 +214,7 @@
 .img-2000 {
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .img-2000 img {
   object-position: 20% 50%;
@@ -235,7 +235,8 @@
 .img-2008 {
   width: 100% !important;
 }
-.img-2008 figure::after {
+.img-2008 figure::after,
+.img-2020 figure::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -243,7 +244,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 }
 .info-2008 {
   position: absolute;
@@ -385,12 +386,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   color: var(--black);
   width: 80%;
   text-align: center;
-  z-index: 1000;
-  border: 1px solid #000;
+  z-index: 1;
+  /* border: 1px solid #000; */
   /* mix-blend-mode: difference; */
   /* background: #000; */
 }
@@ -480,7 +481,7 @@
   }
   .history-info .history-info-year h5 {
     font-size: 4.2rem;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
   }
   .btn-arrow {
     width: 6rem;
@@ -503,7 +504,7 @@
     /* align-items: center; */
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     justify-content: center;
   }
 
@@ -557,5 +558,120 @@
   }
   .info-1910 {
     width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .inner {
+    width: 89.7436% !important;
+  }
+  .history-visual {
+    height: auto;
+  }
+  .history-visual-img {
+    height: 20rem;
+  }
+  .history-title-left span {
+    width: 7.2rem;
+    height: 1.8rem;
+  }
+  .history-title-left h4 {
+    font-size: 3.2rem;
+  }
+  .history-title-right {
+    margin-bottom: -0.4rem;
+  }
+  .history-title-right span {
+    font-size: 1.2rem;
+  }
+  .btn-arrow {
+    width: 6rem;
+    height: 6rem;
+    border: 1.5px solid #000;
+  }
+
+  .history-con .img-1910,
+  .history-con .img-1986,
+  .history-con .img-2000,
+  .history-con .img-2015,
+  .history-con .img-2017,
+  .history-con .img-2024 {
+    height: 25rem;
+    width: 100% !important;
+  }
+
+  .history-info .history-info-year h5 {
+    font-size: 3.6rem;
+    gap: 0.8rem;
+  }
+  .history-info .history-info-year h5::before {
+    font-size: 1.8rem;
+  }
+
+  .history-con {
+    overflow: auto;
+    margin-top: 10rem;
+  }
+  .history-con.con-1962,
+  .history-con.con-2008,
+  .history-con.con-2020 {
+    height: 45rem;
+  }
+
+  .info-1962,
+  .info-2008,
+  .info-2020 {
+    width: 85.7143% !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: flex-end;
+    padding-bottom: 6rem;
+  }
+
+  .info-1962 .history-info-year .btn-arrow,
+  .info-2008 .history-info-year .btn-arrow,
+  .info-2020 .history-info-year .btn-arrow {
+    display: block;
+    border-color: var(--white);
+    background: url(../img/brandstory/ico-arrow-w-mid.svg) no-repeat 50%;
+  }
+
+  .history-con.con-1986,
+  .history-con.con-2000,
+  .history-con.con-2015,
+  .history-con.con-2017,
+  .history-con.con-2024 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .history-info {
+    width: 100%;
+  }
+  .history-info.info-2024 {
+    width: 100% !important;
+  }
+  .info-1986 a,
+  .info-2000 a,
+  .info-2015 a,
+  .info-2017 a {
+    transform: rotate(0deg);
+  }
+
+  .history-info.info-2000 .history-info-year,
+  .history-info.info-2008 .history-info-year,
+  .history-info.info-2015 .history-info-year {
+    flex-direction: row-reverse;
+  }
+  .history-info.info-2008 .history-info-year {
+    flex-direction: row;
+  }
+  .history-info.info-2015 p {
+    text-align: right;
+  }
+
+  .banner-pic figure img {
+    object-position: -80% 80%;
   }
 }
